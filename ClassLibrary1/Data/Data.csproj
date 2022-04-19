@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DataDelegates\" />
+    <Folder Include="Models\" />
+    <Folder Include="Sql\Data\" />
+    <Folder Include="Sql\Procedures\" />
+  </ItemGroup>
+
+</Project>

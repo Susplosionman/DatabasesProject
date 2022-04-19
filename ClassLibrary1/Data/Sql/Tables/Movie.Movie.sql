@@ -1,0 +1,19 @@
+﻿IF OBJECT_ID(N'Movie.Movie') IS NULL
+BEGIN
+	CREATE TABLE Movie.Movie
+	(
+		MovieID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+		[Name] NVARCHAR(64) NOT NULL,
+		ReleaseDate DATETIMEOFFSET NOT NULL,
+		Genre NVARCHAR(64) NOT NULL,
+		DirectorID INT NOT NULL
+			REFERENCES Movie.Director(DirectorID)
+
+
+
+		UNIQUE
+			(
+				UserName
+			)
+	);
+END;
