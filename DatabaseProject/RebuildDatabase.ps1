@@ -3,7 +3,7 @@
 
 Param(
    [string] $Server = "(localdb)\MSSQLLocalDb",
-   [string] $Database = "johnkeller"
+   [string] $Database = "CIS560"
 )
 
 # This script requires the SQL Server module for PowerShell.
@@ -48,9 +48,10 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.GetPerson.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.SavePersonAddress.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrieveAddressesForPerson.sql"
-
+#Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Person.AddressType.sql"
+
 
 Write-Host "Rebuild completed."
 Write-Host ""
