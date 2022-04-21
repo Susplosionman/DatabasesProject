@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5OzB19eusz4I0gejk6dyeCyxeZoInhTya3jNbfwQs4u2TEDoz6L+DFZLkcGjL4zAMnXHd86y6P+UZfq6ioBVIQ==",
+  "dgSpecHash": "LveUEzFoVZ079hzIsNMU1JFzfIC9A/kwnmqGjdCLS3ZR/6aNNkS1Lb2bCcXk0UwxUUCaw0OVg0QGnRWv2TU2Bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "E:\\Coding Projects\\DatabaseReferenceProject\\DatabaseProject\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
