@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataDelegates\" />
-    <Folder Include="Sql\Data\" />
-    <Folder Include="Sql\Procedures\" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
