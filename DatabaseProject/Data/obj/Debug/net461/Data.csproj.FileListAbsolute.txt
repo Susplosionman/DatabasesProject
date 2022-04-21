@@ -15,3 +15,4 @@ C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CoreCompileInputs.cache
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.dll
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.pdb
+C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.csproj.AssemblyReference.cache

@@ -8,5 +8,19 @@ namespace Data.Models
 {
     public class Review
     {
+        public int ReviewID { get; set; }
+        public int UserID { get; set; }
+        public int Rating { get; set; }
+        public string Comment { get; set; }
+        public int MovieID { get; set; }
+
+        public Review(int reviewID, int userID, int rating, string comment, int movieID)
+        {
+            ReviewID = reviewID;
+            UserID = userID;
+            Rating = rating;
+            Comment = comment;
+            MovieID = movieID;
+        }
     }
 }

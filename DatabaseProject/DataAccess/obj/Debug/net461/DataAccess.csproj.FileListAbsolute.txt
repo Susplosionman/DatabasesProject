@@ -15,3 +15,4 @@ C:\Users\Connor\source\repos\DatabasesProject\DatabaseProject\DataAccess\obj\Deb
 C:\Users\Connor\source\repos\DatabasesProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Connor\source\repos\DatabasesProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.dll
 C:\Users\Connor\source\repos\DatabasesProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.pdb
+C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.AssemblyReference.cache
