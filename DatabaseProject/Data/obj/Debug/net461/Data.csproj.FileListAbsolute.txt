@@ -16,3 +16,11 @@ C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.dll
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.pdb
 C:\Users\Connor\Source\Repos\DatabasesProject\DatabaseProject\Data\obj\Debug\net461\Data.csproj.AssemblyReference.cache
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\bin\Debug\net461\Data.dll
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\bin\Debug\net461\Data.pdb
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.csprojAssemblyReference.cache
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfoInputs.cache
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfo.cs
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CoreCompileInputs.cache
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.dll
+E:\Coding Projects\DatabaseReferenceProject\DatabaseProject\Data\obj\Debug\net461\Data.pdb
