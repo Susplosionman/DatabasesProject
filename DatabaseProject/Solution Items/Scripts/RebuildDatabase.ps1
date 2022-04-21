@@ -23,8 +23,8 @@ Write-Host "Rebuilding database $Database on $Server..."
 <#
    If on your local machine, you can drop and re-create the database.
 #>
-& ".\Scripts\DropDatabase.ps1" -Database $Database
-& ".\Scripts\CreateDatabase.ps1" -Database $Database
+& ".DropDatabase.ps1" -Database $Database
+& ".CreateDatabase.ps1" -Database $Database
 
 <#
    If on the department's server, you don't have permissions to drop or create databases.
@@ -34,17 +34,17 @@ Write-Host "Rebuilding database $Database on $Server..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\DropTables.sql"
 
 Write-Host "Creating schema..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Schemas\Movie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Schemas\Movie.sql"
 
 Write-Host "Creating tables..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.Actor.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.ActorMovies.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.Director.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.Movie.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.Review.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.Showing.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.ShowingAttendance.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Tables\Movie.User.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Actor.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.ActorMovies.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Director.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Movie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Review.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Showing.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.ShowingAttendance.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.User.sql"
 
 #Write-Host "Stored procedures..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.CreatePerson.sql"
@@ -55,7 +55,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrieveAddressesForPerson.sql"
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Data\Person.AddressType.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"
 
 
 Write-Host "Rebuild completed."
