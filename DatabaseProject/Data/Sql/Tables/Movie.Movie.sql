@@ -13,7 +13,7 @@ BEGIN
 
 		UNIQUE
 			(
-				UserName
+				[Name]
 			)
 	);
 END;
