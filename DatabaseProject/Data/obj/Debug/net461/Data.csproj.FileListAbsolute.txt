@@ -42,3 +42,6 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\obj\Debug\n
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CoreCompileInputs.cache
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\obj\Debug\net461\Data.dll
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\obj\Debug\net461\Data.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\bin\Debug\net461\DataAccess.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\bin\Debug\net461\DataAccess.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CopyComplete

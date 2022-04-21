@@ -48,3 +48,5 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\obj\Deb
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.CopyComplete
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
 C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\bin\Debug\DataAccess.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv3\DatabaseProject\FrontEnd\bin\Debug\DataAccess.pdb

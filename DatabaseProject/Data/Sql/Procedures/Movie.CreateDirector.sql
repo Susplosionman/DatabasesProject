@@ -1,4 +1,4 @@
-﻿CREATE OR ALTER PROCEDURE Movie.CreateMovie
+﻿CREATE OR ALTER PROCEDURE Movie.CreateDirector
 	@Name NVARCHAR(64),
 	@DirectorID INT OUTPUT
 AS
