@@ -3,22 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BC4B3E7-215A-4CB2-AADA-21EE8BF6B9E6}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\Scripts\RebuildDatabase.ps1 = Solution Items\Scripts\RebuildDatabase.ps1
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{9D2E8624-5032-4E24-B073-4F7F5496A005}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{4DBA8268-206A-46A0-992A-D81816D12A6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{A2FCC8BD-AF75-44B8-AE17-5B5F5075C510}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{29C84046-24F7-42AA-8EE3-6E094A4CFA0C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8C733FD6-19B4-44E6-9B70-7FF244F135D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{AB6C4AF9-4E2C-415E-B5C9-516FC63915E0}"
 	ProjectSection(SolutionItems) = preProject
-		Solution Items\Scripts\CreateDatabase.ps1 = Solution Items\Scripts\CreateDatabase.ps1
-		Solution Items\Scripts\CreateDatabase.sql = Solution Items\Scripts\CreateDatabase.sql
-		Solution Items\Scripts\DropDatabase.ps1 = Solution Items\Scripts\DropDatabase.ps1
+		CreateDatabase.ps1 = CreateDatabase.ps1
+		CreateDatabase.sql = CreateDatabase.sql
+		DropDatabase.ps1 = DropDatabase.ps1
+		RebuildDatabase.ps1 = RebuildDatabase.ps1
 	EndProjectSection
 EndProject
 Global
@@ -44,7 +42,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{29C84046-24F7-42AA-8EE3-6E094A4CFA0C} = {1BC4B3E7-215A-4CB2-AADA-21EE8BF6B9E6}
+		{AB6C4AF9-4E2C-415E-B5C9-516FC63915E0} = {8C733FD6-19B4-44E6-9B70-7FF244F135D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {12A6FA7A-01E1-44DF-AB83-83B99B09C857}
