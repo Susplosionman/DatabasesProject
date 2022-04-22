@@ -28,23 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.uxTestAdd = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.uxSelectButton = new System.Windows.Forms.Button();
+            this.uxDeleteSelectedButton = new System.Windows.Forms.Button();
+            this.uxMovieBox = new System.Windows.Forms.ListBox();
+            this.uxAddMovieButton = new System.Windows.Forms.Button();
+            this.uxLogoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Employee View";
             // 
             // uxTestAdd
             // 
-            this.uxTestAdd.Location = new System.Drawing.Point(7, 37);
+            this.uxTestAdd.Location = new System.Drawing.Point(3, 254);
             this.uxTestAdd.Name = "uxTestAdd";
             this.uxTestAdd.Size = new System.Drawing.Size(116, 23);
             this.uxTestAdd.TabIndex = 1;
@@ -52,34 +46,76 @@
             this.uxTestAdd.UseVisualStyleBackColor = true;
             this.uxTestAdd.Click += new System.EventHandler(this.uxTestAdd_Click);
             // 
-            // button1
+            // uxSelectButton
             // 
-            this.button1.Location = new System.Drawing.Point(7, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Test Add director";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.uxSelectButton.Location = new System.Drawing.Point(331, 57);
+            this.uxSelectButton.Name = "uxSelectButton";
+            this.uxSelectButton.Size = new System.Drawing.Size(72, 48);
+            this.uxSelectButton.TabIndex = 6;
+            this.uxSelectButton.Text = "Modify Selected";
+            this.uxSelectButton.UseVisualStyleBackColor = true;
+            // 
+            // uxDeleteSelectedButton
+            // 
+            this.uxDeleteSelectedButton.Location = new System.Drawing.Point(331, 111);
+            this.uxDeleteSelectedButton.Name = "uxDeleteSelectedButton";
+            this.uxDeleteSelectedButton.Size = new System.Drawing.Size(72, 50);
+            this.uxDeleteSelectedButton.TabIndex = 7;
+            this.uxDeleteSelectedButton.Text = "Delete Selected";
+            this.uxDeleteSelectedButton.UseVisualStyleBackColor = true;
+            this.uxDeleteSelectedButton.Click += new System.EventHandler(this.uxDeleteSelectedButton_Click);
+            // 
+            // uxMovieBox
+            // 
+            this.uxMovieBox.FormattingEnabled = true;
+            this.uxMovieBox.Location = new System.Drawing.Point(3, 3);
+            this.uxMovieBox.Name = "uxMovieBox";
+            this.uxMovieBox.Size = new System.Drawing.Size(322, 238);
+            this.uxMovieBox.TabIndex = 8;
+            this.uxMovieBox.SelectedIndexChanged += new System.EventHandler(this.uxMovieBox_SelectedIndexChanged);
+            // 
+            // uxAddMovieButton
+            // 
+            this.uxAddMovieButton.Location = new System.Drawing.Point(331, 3);
+            this.uxAddMovieButton.Name = "uxAddMovieButton";
+            this.uxAddMovieButton.Size = new System.Drawing.Size(72, 48);
+            this.uxAddMovieButton.TabIndex = 9;
+            this.uxAddMovieButton.Text = "Add Movie";
+            this.uxAddMovieButton.UseVisualStyleBackColor = true;
+            this.uxAddMovieButton.Click += new System.EventHandler(this.uxAddMovieButton_Click);
+            // 
+            // uxLogoutButton
+            // 
+            this.uxLogoutButton.Location = new System.Drawing.Point(331, 167);
+            this.uxLogoutButton.Name = "uxLogoutButton";
+            this.uxLogoutButton.Size = new System.Drawing.Size(72, 74);
+            this.uxLogoutButton.TabIndex = 10;
+            this.uxLogoutButton.Text = "Logout";
+            this.uxLogoutButton.UseVisualStyleBackColor = true;
+            this.uxLogoutButton.Click += new System.EventHandler(this.uxLogoutButton_Click);
             // 
             // EmployeeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.uxLogoutButton);
+            this.Controls.Add(this.uxAddMovieButton);
+            this.Controls.Add(this.uxMovieBox);
+            this.Controls.Add(this.uxDeleteSelectedButton);
+            this.Controls.Add(this.uxSelectButton);
             this.Controls.Add(this.uxTestAdd);
-            this.Controls.Add(this.label1);
             this.Name = "EmployeeView";
-            this.Size = new System.Drawing.Size(320, 201);
+            this.Size = new System.Drawing.Size(413, 284);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button uxTestAdd;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button uxSelectButton;
+        private System.Windows.Forms.Button uxDeleteSelectedButton;
+        private System.Windows.Forms.ListBox uxMovieBox;
+        private System.Windows.Forms.Button uxAddMovieButton;
+        private System.Windows.Forms.Button uxLogoutButton;
     }
 }

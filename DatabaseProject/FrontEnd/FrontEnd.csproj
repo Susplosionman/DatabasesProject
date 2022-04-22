@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMovieControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddMovieControl.Designer.cs">
+      <DependentUpon>AddMovieControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="UserInterface.Designer.cs">
       <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddMovieControl.resx">
+      <DependentUpon>AddMovieControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerView.resx">
       <DependentUpon>CustomerView.cs</DependentUpon>
     </EmbeddedResource>

@@ -23,5 +23,13 @@ namespace Data.Models
             Genre = genre;
             DirectorID = directorID;
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.Name);
+
+            return sb.ToString();
+        }
     }
 }

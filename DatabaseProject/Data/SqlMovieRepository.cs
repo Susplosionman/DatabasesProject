@@ -37,5 +37,22 @@ namespace Data
             var d = new CreateDirectorDataDelegate(name);
             return executor.ExecuteNonQuery(d);
         }
+
+        public IReadOnlyList<Movie> RetrieveMovies()
+        {
+            return executor.ExecuteReader(new RetrieveMoviesDataDelegate());
+        }
+
+        public void DeleteMovie(int id)
+        {
+            executor.ExecuteNonQuery(new DeleteMovieDataDelegate(id));
+
+        }
+
+        public Director FetchDirector(string name)
+        {
+            var d = new FetchDirectorDataDelegate(name);
+            return executor.ExecuteReader(d);
+        }
     }
 }

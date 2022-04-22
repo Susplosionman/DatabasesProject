@@ -1,0 +1,39 @@
+﻿using Data;
+using Data.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FrontEnd
+{
+    public partial class AddMovieControl : UserControl
+    {
+        public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
+        public AddMovieControl()
+        {
+            InitializeComponent();
+        }
+
+        private void uxAddMovieButton_Click(object sender, EventArgs e)
+        {
+            // if this director does not already exist, add the director (ADD THE IF)
+            smr.CreateDirector(uxDirectorTB.Text);
+            // fetch director by name, use that value as the ID
+            Director d = smr.FetchDirector(uxDirectorTB.Text);
+            smr.CreateMovie(uxMovieNameTB.Text, uxDateTimePicker.Value, uxGenreTB.Text, d.DirectorID);
+
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                ui.Controls.Add(ui._employeeView);
+                ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
+            }
+        }
+    }
+}
