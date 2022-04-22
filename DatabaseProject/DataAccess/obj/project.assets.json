@@ -8,19 +8,19 @@
     ".NETFramework,Version=v4.6.1": []
   },
   "packageFolders": {
-    "C:\\Users\\dakly\\.nuget\\packages\\": {}
+    "C:\\Users\\Teegan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "E:\\Coding Projects\\DatabaseFolder\\DatabaseProject\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\dakly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\obj\\",
+      "projectPath": "E:\\Coding Projects\\DatabaseFolder\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Teegan\\.nuget\\packages\\",
+      "outputPath": "E:\\Coding Projects\\DatabaseFolder\\DatabaseProject\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dakly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Teegan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,7 +45,7 @@
     "frameworks": {
       "net461": {
         "targetAlias": "net461",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

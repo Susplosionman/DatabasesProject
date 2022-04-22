@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SqV05sNeD1BXd57VszvUZzkN3Ekr38USSwLL2eBfD6atLrtIzqkuVCnt6en3JZvd/YsIZmIvMhGbsp/+i+6zag==",
+  "dgSpecHash": "wv01SUAsHbW8ta15d00Jg+TwnVlze7rpRhuQvNTx4JkK4u8P9upjhcm4pgY6jQijmXwFEqqiVtwZJqTevbtf1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "E:\\Coding Projects\\DatabaseFolder\\DatabaseProject\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
