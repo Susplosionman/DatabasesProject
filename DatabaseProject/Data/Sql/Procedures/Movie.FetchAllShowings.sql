@@ -1,0 +1,7 @@
+﻿CREATE or ALTER PROCEDURE Movie.FetchAllShowings
+AS
+
+SELECT *
+FROM Movie.Showing M
+WHERE M.ShowTime >= SYSDATETIMEOFFSET()
+GO
