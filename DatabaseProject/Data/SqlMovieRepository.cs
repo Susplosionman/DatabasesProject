@@ -54,5 +54,16 @@ namespace Data
             var d = new FetchDirectorDataDelegate(name);
             return executor.ExecuteReader(d);
         }
+
+        public IReadOnlyList<Showing> RetrieveShowingsForMovie(int id)
+        {
+            return executor.ExecuteReader(new RetrieveShowingsForMovieDataDelegate(id));
+        }
+
+        public Showing CreateShowing(DateTimeOffset time, int price, int movieID)
+        {
+            var d = new CreateShowingDataDelegate(time,price,movieID);
+            return executor.ExecuteNonQuery(d);
+        }
     }
 }

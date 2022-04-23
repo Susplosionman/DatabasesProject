@@ -21,7 +21,6 @@ namespace Data.DataDelegates
             base.PrepareCommand(command);
 
             command.Parameters.AddWithValue("MovieID", MovieID);
-            
         }
     }
 }

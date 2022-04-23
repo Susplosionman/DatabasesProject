@@ -22,11 +22,20 @@ namespace FrontEnd
 
         private void uxAddMovieButton_Click(object sender, EventArgs e)
         {
-            // if this director does not already exist, add the director (ADD THE IF)
-            smr.CreateDirector(uxDirectorTB.Text);
-            // fetch director by name, use that value as the ID
+            // if this director does not already exist, add the director
+
             Director d = smr.FetchDirector(uxDirectorTB.Text);
-            smr.CreateMovie(uxMovieNameTB.Text, uxDateTimePicker.Value, uxGenreTB.Text, d.DirectorID);
+            if (d.DirectorID > 0)
+            {
+                smr.CreateMovie(uxMovieNameTB.Text, uxDateTimePicker.Value, uxGenreTB.Text, d.DirectorID);
+            }
+            else
+            {
+                smr.CreateDirector(uxDirectorTB.Text);
+                Director d2 = smr.FetchDirector(uxDirectorTB.Text);
+                smr.CreateMovie(uxMovieNameTB.Text, uxDateTimePicker.Value, uxGenreTB.Text, d2.DirectorID);
+            }
+            
 
             if (this.FindForm() is UserInterface ui)
             {

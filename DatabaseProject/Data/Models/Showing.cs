@@ -10,10 +10,10 @@ namespace Data.Models
     {
         public int ShowingID { get; set; }
         public DateTimeOffset ShowTime { get; set; }
-        public float TicketPrice { get; set; }
+        public int TicketPrice { get; set; }
         public int MovieID { get; set; }
 
-        public Showing(int showingID, DateTimeOffset time, float price, int movieID)
+        public Showing(int showingID, DateTimeOffset time, int price, int movieID)
         {
             ShowingID = showingID;
             ShowTime = time;

@@ -12,10 +12,10 @@ namespace Data.DataDelegates
     public class CreateShowingDataDelegate : NonQueryDataDelegate<Showing>
     {
         public DateTimeOffset ShowTime { get; set; }
-        public float TicketPrice { get; set; }
+        public int TicketPrice { get; set; }
         public int MovieID { get; set; }
 
-        public CreateShowingDataDelegate(DateTimeOffset time, float price, int movieID) : base("Movie.CreateShowing")
+        public CreateShowingDataDelegate(DateTimeOffset time, int price, int movieID) : base("Movie.CreateShowing")
         {
             ShowTime = time;
             TicketPrice = price;

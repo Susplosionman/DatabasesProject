@@ -79,5 +79,16 @@ namespace FrontEnd
                 ui.Size = new Size(ui._addMovieControl.Width + 50, ui._addMovieControl.Height + 50);
             }
         }
+
+        private void uxSelectButton_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                ui._modifyMovieControl = new ModifySelectedMovie(_selectedMovie);
+                ui.Controls.Add(ui._modifyMovieControl);
+                ui.Size = new Size(ui._modifyMovieControl.Width + 50, ui._modifyMovieControl.Height + 50);
+            }
+        }
     }
 }

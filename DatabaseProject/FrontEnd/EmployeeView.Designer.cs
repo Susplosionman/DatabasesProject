@@ -54,6 +54,7 @@
             this.uxSelectButton.TabIndex = 6;
             this.uxSelectButton.Text = "Modify Selected";
             this.uxSelectButton.UseVisualStyleBackColor = true;
+            this.uxSelectButton.Click += new System.EventHandler(this.uxSelectButton_Click);
             // 
             // uxDeleteSelectedButton
             // 

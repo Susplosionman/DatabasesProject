@@ -4,7 +4,7 @@ BEGIN
 	(
 		ShowingID INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
 		ShowTime DATETIMEOFFSET NOT NULL,
-		TicketPrice FLOAT NOT NULL, -- 4 digits, 2 after the decimal point -> XX.YY
+		TicketPrice INT NOT NULL,
 		MovieID INT NOT NULL
 			REFERENCES Movie.Movie(MovieID)
 	);

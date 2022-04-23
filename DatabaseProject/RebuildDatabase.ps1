@@ -53,7 +53,9 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\P
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveMovies.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.DeleteMovie.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.FetchDirector.sql"
-#Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "PersonData\Sql\Procedures\Person.RetrieveAddressesForPerson.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateShowing.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveShowingsForMovie.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.DeleteShowing.sql"
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"

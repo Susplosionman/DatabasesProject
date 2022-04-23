@@ -25,10 +25,15 @@ namespace Data.DataDelegates
         public override Director Translate(SqlCommand command, IDataRowReader reader)
         {
             if (!reader.Read())
-                throw new RecordNotFoundException(Name);
+            {
+                return new Director(-1, "Not Found");
+            }
+            else
+            {
+                return new Director(reader.GetInt32("DirectorID"), Name);
+            }
 
-            return new Director(reader.GetInt32("DirectorID"),
-               Name);
+            
                
         }
     }

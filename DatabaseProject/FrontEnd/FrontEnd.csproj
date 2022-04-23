@@ -70,6 +70,12 @@
     <Compile Include="LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifySelectedMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModifySelectedMovie.Designer.cs">
+      <DependentUpon>ModifySelectedMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface.cs">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifySelectedMovie.resx">
+      <DependentUpon>ModifySelectedMovie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -69,3 +69,4 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv4\DatabaseProject\FrontEnd\obj\Deb
 C:\Users\Connor\Source\Repos\DatabasesProjectv4\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
 C:\Users\Connor\Source\Repos\DatabasesProjectv4\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
 C:\Users\Connor\Source\Repos\DatabasesProjectv4\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.AddMovieControl.resources
+C:\Users\Connor\Source\Repos\DatabasesProjectv4\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.ModifySelectedMovie.resources

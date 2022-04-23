@@ -19,6 +19,7 @@ namespace FrontEnd
         public EmployeeView _employeeView;
         public CustomerView _customerView;
         public AddMovieControl _addMovieControl;
+        public ModifySelectedMovie _modifyMovieControl;
         public UserInterface()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace FrontEnd
             _employeeView = new EmployeeView();
             _customerView = new CustomerView();
             _addMovieControl = new AddMovieControl();
+            //_modifyMovieControl = new ModifySelectedMovie();
             this.Controls.Add(this._loginControl);
             this.Size = new Size(this._loginControl.Width + 50, this._loginControl.Height + 50);
         }
