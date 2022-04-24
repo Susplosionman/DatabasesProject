@@ -21,5 +21,9 @@ namespace Data.Models
             MovieID = movieID;
 
         }
+        public override string ToString()
+        {
+            return ShowTime.Day + ":" + ShowTime.Hour + ":" + ShowTime.Minute;
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="AddMovieControl.Designer.cs">
       <DependentUpon>AddMovieControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddOrEditShowing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddOrEditShowing.Designer.cs">
+      <DependentUpon>AddOrEditShowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="AddMovieControl.resx">
       <DependentUpon>AddMovieControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrEditShowing.resx">
+      <DependentUpon>AddOrEditShowing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerView.resx">
       <DependentUpon>CustomerView.cs</DependentUpon>

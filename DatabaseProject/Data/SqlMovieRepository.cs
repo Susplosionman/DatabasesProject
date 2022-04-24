@@ -62,8 +62,13 @@ namespace Data
 
         public Showing CreateShowing(DateTimeOffset time, int price, int movieID)
         {
-            var d = new CreateShowingDataDelegate(time,price,movieID);
+            var d = new CreateShowingDataDelegate(time, price, movieID);
             return executor.ExecuteNonQuery(d);
+        }
+        public void DeleteShowing(int id)
+        {
+            executor.ExecuteNonQuery(new DeleteShowingDataDelegate(id));
+
         }
     }
 }

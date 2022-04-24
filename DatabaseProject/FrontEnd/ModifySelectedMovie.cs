@@ -17,26 +17,39 @@ namespace FrontEnd
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
 
         BindingList<Showing> Showings = new BindingList<Showing>();
-
+        Movie CurMovie { get; set; }
+        public Showing ShowingAdded { get; set; }
         public ModifySelectedMovie(Movie m)
         {
             InitializeComponent();
+            CurMovie = m;
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(m.MovieID);
             for (int i = 0; i < showings.Count; i++)
             {
                 Showings.Add(showings[i]);
             }
             uxShowingList.DataSource = Showings;
+            uxShowingList.Update();
         }
 
         private void uxEditShowingButton_Click(object sender, EventArgs e)
         {
-
+            Showing s = uxShowingList.SelectedItem as Showing;
+            AddOrEditShowing aoes = new AddOrEditShowing(false, s, CurMovie);
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                ui.Controls.Add(aoes); // passing in true for adding, false for editing.
+                ui.Size = new Size(aoes.Width + 50, aoes.Height + 50);
+            }
         }
 
         private void uxDeleteShowingButton_Click(object sender, EventArgs e)
         {
-
+            Showing s = uxShowingList.SelectedItem as Showing;
+            smr.DeleteShowing(s.ShowingID);
+            Showings.Remove(s);
+            uxShowingList.Update();
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)
@@ -51,9 +64,13 @@ namespace FrontEnd
 
         private void uxAddShowing_Click(object sender, EventArgs e)
         {
-            Showings.Add(smr.CreateShowing(DateTime.Now, 5, 1));
-            
-            uxShowingList.Update();
+            AddOrEditShowing aoes = new AddOrEditShowing(true, null, CurMovie);
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                ui.Controls.Add(aoes); // passing in true for adding, false for editing.
+                ui.Size = new Size(aoes.Width + 50, aoes.Height + 50);
+            }
         }
     }
 }
