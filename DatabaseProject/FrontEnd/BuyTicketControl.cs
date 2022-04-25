@@ -16,12 +16,12 @@ namespace FrontEnd
     {
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
         Movie CurMovie { get; set; }
-
-        BindingList<Showing> Showings { get; set; }
-        public BuyTicketControl(Movie m) 
+        User CurUser { get; set; }
+        BindingList<Showing> Showings { get; set; } = new BindingList<Showing>();
+        public BuyTicketControl(Movie m, User u) 
         {
             InitializeComponent();
-
+            CurUser = u;
             CurMovie = m;
 
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(CurMovie.MovieID);
@@ -37,7 +37,7 @@ namespace FrontEnd
         {
             if (this.FindForm() is UserInterface ui)
             {
-                MovieInfoControl mic = new MovieInfoControl(CurMovie);
+                MovieInfoControl mic = new MovieInfoControl(CurMovie, CurUser);
                 ui.Controls.Remove(this);
                 ui.Controls.Add(mic);
                 ui.Size = new Size(mic.Width + 50, mic.Height + 50);
@@ -47,7 +47,7 @@ namespace FrontEnd
         private void uxBuyTicketButton_Click(object sender, EventArgs e)
         {
             Showing s = uxShowingBox.SelectedItem as Showing;
-            //smr.CreateShowingAttendance(CurUser.UserID, s.ShowingID)
+            smr.CreateShowingAttendance(CurUser.UserID, s.ShowingID);
         }
     }
 }

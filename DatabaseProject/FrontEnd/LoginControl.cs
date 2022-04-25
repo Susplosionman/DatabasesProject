@@ -18,6 +18,8 @@ namespace FrontEnd
 
         private Dictionary<string, string> UserDictionary { get; set; } = new Dictionary<string, string>();
         private Dictionary<string, string> UserTypeDictionary { get; set; } = new Dictionary<string, string>();
+
+        private Dictionary<string, User> ActualUsers { get; set; } = new Dictionary<string, User>();
         private List<User> Users { get; set; }
         public LoginControl()
         {
@@ -28,6 +30,7 @@ namespace FrontEnd
             {
                 UserDictionary.Add(Users[i].Username, Users[i].Password);
                 UserTypeDictionary.Add(Users[i].Username, Users[i].Type);
+                ActualUsers.Add(Users[i].Username, Users[i]);
             }
         }
 
@@ -44,7 +47,7 @@ namespace FrontEnd
                             if (this.FindForm() is UserInterface ui)
                             {
                                 ui.Controls.Remove(this);
-                                ui.Controls.Add(ui._employeeView);
+                                ui.Controls.Add(new EmployeeView(ActualUsers[uxUsernameTB.Text]));
                                 ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
                             }
                         }
@@ -81,7 +84,7 @@ namespace FrontEnd
                             if (this.FindForm() is UserInterface ui)
                             {
                                 ui.Controls.Remove(this);
-                                ui.Controls.Add(new CustomerView());
+                                ui.Controls.Add(new CustomerView(ActualUsers[uxUsernameTB.Text]));
                                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
                             }
                         }
@@ -107,7 +110,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(new CustomerView());
+                ui.Controls.Add(new CustomerView(null));
                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
             }
         }
@@ -117,7 +120,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(ui._employeeView);
+                ui.Controls.Add(new EmployeeView(null));
                 ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
             }
         }

@@ -26,9 +26,9 @@ namespace FrontEnd
             
             
             _loginControl = new LoginControl();
-            _employeeView = new EmployeeView();
-            _customerView = new CustomerView();
-            _addMovieControl = new AddMovieControl();
+            _employeeView = new EmployeeView(null);
+            _customerView = new CustomerView(null);
+            _addMovieControl = new AddMovieControl(null);
             //_modifyMovieControl = new ModifySelectedMovie();
             this.Controls.Add(this._loginControl);
             this.Size = new Size(this._loginControl.Width + 50, this._loginControl.Height + 50);

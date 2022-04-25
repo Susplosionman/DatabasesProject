@@ -18,11 +18,12 @@ namespace FrontEnd
 
         public BindingList<Movie> Movies { get; set; } = new BindingList<Movie>();
         public BindingList<Showing> Showings { get; set; } = new BindingList<Showing>();
-
-        public CustomerView()
+        User CurUser { get; set; }
+        public CustomerView(User u)
         {
             InitializeComponent();
             List<Movie> movies = (List<Movie>)smr.RetrieveMovies();
+            CurUser = u;
             for (int i = 0; i < movies.Count; i++)
             {
                 Movies.Add(movies[i]);
@@ -66,7 +67,7 @@ namespace FrontEnd
                 ui.Controls.Remove(this);
 
                 Movie movieToUse = FindMovieUsingMovieName(uxListView.SelectedItems[0].Text);
-                MovieInfoControl movieInfoControl = new MovieInfoControl(movieToUse);
+                MovieInfoControl movieInfoControl = new MovieInfoControl(movieToUse, CurUser);
 
                 ui.Controls.Add(movieInfoControl);
                 ui.Size = new Size(movieInfoControl.Width + 50, movieInfoControl.Height + 50);
@@ -83,6 +84,20 @@ namespace FrontEnd
                 }
             }
             return null;
+        }
+
+        private void uxBuyTicket_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+
+                Movie movieToUse = FindMovieUsingMovieName(uxListView.SelectedItems[0].Text);
+                BuyTicketControl btc = new BuyTicketControl(movieToUse, CurUser);
+
+                ui.Controls.Add(btc);
+                ui.Size = new Size(btc.Width + 50, btc.Height + 50);
+            }
         }
     }
 }

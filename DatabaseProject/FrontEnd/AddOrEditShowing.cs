@@ -17,16 +17,16 @@ namespace FrontEnd
         public bool AddingOrEditing { get; set; }
         public Showing CurShowing { get; set; }
         public Movie CurMovie { get; set; }
-
+        public User CurUser { get; set; }
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
-        public AddOrEditShowing(bool addingOrEditing, Showing s, Movie m)
+        public AddOrEditShowing(bool addingOrEditing, Showing s, Movie m, User u)
         {
             InitializeComponent();
 
             AddingOrEditing = addingOrEditing;
             CurShowing = s;
             CurMovie = m;
-
+            CurUser = u;
             if (addingOrEditing)
             {
                 uxAoELabel.Text = "Add Showing";
@@ -53,7 +53,7 @@ namespace FrontEnd
                 CurShowing = smr.CreateShowing(uxDatePicker.Value, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
             }
             
-            ModifySelectedMovie msm = new ModifySelectedMovie(CurMovie);
+            ModifySelectedMovie msm = new ModifySelectedMovie(CurMovie, CurUser);
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);

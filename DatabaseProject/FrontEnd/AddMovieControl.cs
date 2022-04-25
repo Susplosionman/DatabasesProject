@@ -15,9 +15,11 @@ namespace FrontEnd
     public partial class AddMovieControl : UserControl
     {
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
-        public AddMovieControl()
+        User CurUser { get; set; }
+        public AddMovieControl(User u)
         {
             InitializeComponent();
+            CurUser = u;
         }
 
         private void uxAddMovieButton_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(new EmployeeView());
+                ui.Controls.Add(new EmployeeView(CurUser));
                 ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
             }
         }

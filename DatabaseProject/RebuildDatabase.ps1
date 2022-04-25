@@ -60,6 +60,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\P
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateReview.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateUser.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveAllUsers.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateShowingAttendance.sql"
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"

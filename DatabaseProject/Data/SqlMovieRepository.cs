@@ -47,7 +47,11 @@ namespace Data
             var d = new CreateUserDataDelegate(type, username, pw);
             return executor.ExecuteNonQuery(d);
         }
-
+        public ShowingAttendance CreateShowingAttendance(int uID, int sID)
+        {
+            var d = new CreateShowingAttendanceDataDelegate(uID,sID);
+            return executor.ExecuteNonQuery(d);
+        }
         public IReadOnlyList<Movie> RetrieveMovies()
         {
             return executor.ExecuteReader(new RetrieveMoviesDataDelegate());

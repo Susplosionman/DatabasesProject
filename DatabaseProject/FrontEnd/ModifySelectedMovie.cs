@@ -18,11 +18,13 @@ namespace FrontEnd
 
         BindingList<Showing> Showings = new BindingList<Showing>();
         Movie CurMovie { get; set; }
+        User CurUser { get; set; }
         public Showing ShowingAdded { get; set; }
-        public ModifySelectedMovie(Movie m)
+        public ModifySelectedMovie(Movie m, User u)
         {
             InitializeComponent();
             CurMovie = m;
+            CurUser = u;
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(m.MovieID);
             for (int i = 0; i < showings.Count; i++)
             {
@@ -35,7 +37,7 @@ namespace FrontEnd
         private void uxEditShowingButton_Click(object sender, EventArgs e)
         {
             Showing s = uxShowingList.SelectedItem as Showing;
-            AddOrEditShowing aoes = new AddOrEditShowing(false, s, CurMovie);
+            AddOrEditShowing aoes = new AddOrEditShowing(false, s, CurMovie, CurUser);
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
@@ -57,14 +59,14 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(new EmployeeView());
+                ui.Controls.Add(new EmployeeView(CurUser));
                 ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
             }
         }
 
         private void uxAddShowing_Click(object sender, EventArgs e)
         {
-            AddOrEditShowing aoes = new AddOrEditShowing(true, null, CurMovie);
+            AddOrEditShowing aoes = new AddOrEditShowing(true, null, CurMovie, CurUser);
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);

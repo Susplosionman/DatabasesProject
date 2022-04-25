@@ -30,12 +30,12 @@
         {
             this.uxPasswordTB = new System.Windows.Forms.MaskedTextBox();
             this.uxUsernameTB = new System.Windows.Forms.TextBox();
-            this.uxCustomerRegister = new System.Windows.Forms.Button();
             this.uxEmployeeRegister = new System.Windows.Forms.Button();
             this.uxPasswordLabel = new System.Windows.Forms.Label();
             this.uxUsernameLabel = new System.Windows.Forms.Label();
             this.uxRegisterLabel = new System.Windows.Forms.Label();
             this.uxReturnButton = new System.Windows.Forms.Button();
+            this.uxResponseLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxPasswordTB
@@ -52,23 +52,15 @@
             this.uxUsernameTB.Size = new System.Drawing.Size(100, 20);
             this.uxUsernameTB.TabIndex = 10;
             // 
-            // uxCustomerRegister
-            // 
-            this.uxCustomerRegister.Location = new System.Drawing.Point(89, 91);
-            this.uxCustomerRegister.Name = "uxCustomerRegister";
-            this.uxCustomerRegister.Size = new System.Drawing.Size(75, 46);
-            this.uxCustomerRegister.TabIndex = 9;
-            this.uxCustomerRegister.Text = "Register as Customer";
-            this.uxCustomerRegister.UseVisualStyleBackColor = true;
-            // 
             // uxEmployeeRegister
             // 
-            this.uxEmployeeRegister.Location = new System.Drawing.Point(6, 91);
+            this.uxEmployeeRegister.Location = new System.Drawing.Point(8, 134);
             this.uxEmployeeRegister.Name = "uxEmployeeRegister";
-            this.uxEmployeeRegister.Size = new System.Drawing.Size(75, 46);
+            this.uxEmployeeRegister.Size = new System.Drawing.Size(156, 46);
             this.uxEmployeeRegister.TabIndex = 8;
-            this.uxEmployeeRegister.Text = "Register as Employee";
+            this.uxEmployeeRegister.Text = "Register";
             this.uxEmployeeRegister.UseVisualStyleBackColor = true;
+            this.uxEmployeeRegister.Click += new System.EventHandler(this.uxEmployeeRegister_Click);
             // 
             // uxPasswordLabel
             // 
@@ -99,27 +91,37 @@
             // 
             // uxReturnButton
             // 
-            this.uxReturnButton.Location = new System.Drawing.Point(170, 91);
+            this.uxReturnButton.Location = new System.Drawing.Point(170, 134);
             this.uxReturnButton.Name = "uxReturnButton";
             this.uxReturnButton.Size = new System.Drawing.Size(69, 46);
             this.uxReturnButton.TabIndex = 13;
             this.uxReturnButton.Text = "Return to Login";
             this.uxReturnButton.UseVisualStyleBackColor = true;
+            this.uxReturnButton.Click += new System.EventHandler(this.uxReturnButton_Click);
+            // 
+            // uxResponseLabel
+            // 
+            this.uxResponseLabel.AutoSize = true;
+            this.uxResponseLabel.Location = new System.Drawing.Point(41, 102);
+            this.uxResponseLabel.Name = "uxResponseLabel";
+            this.uxResponseLabel.Size = new System.Drawing.Size(135, 13);
+            this.uxResponseLabel.TabIndex = 14;
+            this.uxResponseLabel.Text = "Enter credentials to register";
             // 
             // RegisterUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxResponseLabel);
             this.Controls.Add(this.uxReturnButton);
             this.Controls.Add(this.uxRegisterLabel);
             this.Controls.Add(this.uxPasswordTB);
             this.Controls.Add(this.uxUsernameTB);
-            this.Controls.Add(this.uxCustomerRegister);
             this.Controls.Add(this.uxEmployeeRegister);
             this.Controls.Add(this.uxPasswordLabel);
             this.Controls.Add(this.uxUsernameLabel);
             this.Name = "RegisterUserControl";
-            this.Size = new System.Drawing.Size(242, 150);
+            this.Size = new System.Drawing.Size(242, 183);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,11 +131,11 @@
 
         private System.Windows.Forms.MaskedTextBox uxPasswordTB;
         private System.Windows.Forms.TextBox uxUsernameTB;
-        private System.Windows.Forms.Button uxCustomerRegister;
         private System.Windows.Forms.Button uxEmployeeRegister;
         private System.Windows.Forms.Label uxPasswordLabel;
         private System.Windows.Forms.Label uxUsernameLabel;
         private System.Windows.Forms.Label uxRegisterLabel;
         private System.Windows.Forms.Button uxReturnButton;
+        private System.Windows.Forms.Label uxResponseLabel;
     }
 }

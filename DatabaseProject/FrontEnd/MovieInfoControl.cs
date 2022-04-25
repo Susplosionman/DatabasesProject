@@ -16,10 +16,11 @@ namespace FrontEnd
     {
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
         Movie CurMovie { get; set; }
-        public MovieInfoControl(Movie movie)
+        User CurUser { get; set; }
+        public MovieInfoControl(Movie movie, User u)
         {
             InitializeComponent();
-            
+            CurUser = u;
             CurMovie = movie;
             Director d = smr.FetchDirectorByID(movie.DirectorID);
             
@@ -41,7 +42,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(new CustomerView());
+                ui.Controls.Add(new CustomerView(CurUser));
                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
             }
         }
@@ -50,7 +51,7 @@ namespace FrontEnd
         {
             if (this.FindForm() is UserInterface ui)
             {
-                LeaveReviewControl lrc = new LeaveReviewControl(CurMovie);
+                LeaveReviewControl lrc = new LeaveReviewControl(CurMovie, CurUser);
                 ui.Controls.Remove(this);
                 ui.Controls.Add(lrc);
                 ui.Size = new Size(lrc.Width + 50, lrc.Height + 50);
@@ -61,7 +62,7 @@ namespace FrontEnd
         {
             if (this.FindForm() is UserInterface ui)
             {
-                BuyTicketControl btc = new BuyTicketControl(CurMovie);
+                BuyTicketControl btc = new BuyTicketControl(CurMovie, CurUser);
                 ui.Controls.Remove(this);
                 ui.Controls.Add(btc);
                 ui.Size = new Size(btc.Width + 50, btc.Height + 50);

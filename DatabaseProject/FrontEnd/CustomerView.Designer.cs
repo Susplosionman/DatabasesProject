@@ -32,10 +32,10 @@
             this.uxListView = new System.Windows.Forms.ListView();
             this.uxMovieColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.uxAvgRating = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.uxIsShowing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.uxSeeMovieInfo = new System.Windows.Forms.Button();
             this.uxBuyTicket = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
-            this.uxIsShowing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +56,7 @@
             this.uxListView.GridLines = true;
             this.uxListView.HideSelection = false;
             this.uxListView.Location = new System.Drawing.Point(5, 23);
-            this.uxListView.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uxListView.Margin = new System.Windows.Forms.Padding(1);
             this.uxListView.Name = "uxListView";
             this.uxListView.Size = new System.Drawing.Size(364, 225);
             this.uxListView.TabIndex = 2;
@@ -73,10 +73,15 @@
             this.uxAvgRating.Text = "Average Rating";
             this.uxAvgRating.Width = 87;
             // 
+            // uxIsShowing
+            // 
+            this.uxIsShowing.Text = "Is Currently Showing";
+            this.uxIsShowing.Width = 121;
+            // 
             // uxSeeMovieInfo
             // 
             this.uxSeeMovieInfo.Location = new System.Drawing.Point(132, 251);
-            this.uxSeeMovieInfo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uxSeeMovieInfo.Margin = new System.Windows.Forms.Padding(1);
             this.uxSeeMovieInfo.Name = "uxSeeMovieInfo";
             this.uxSeeMovieInfo.Size = new System.Drawing.Size(108, 68);
             this.uxSeeMovieInfo.TabIndex = 3;
@@ -87,28 +92,24 @@
             // uxBuyTicket
             // 
             this.uxBuyTicket.Location = new System.Drawing.Point(5, 250);
-            this.uxBuyTicket.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uxBuyTicket.Margin = new System.Windows.Forms.Padding(1);
             this.uxBuyTicket.Name = "uxBuyTicket";
             this.uxBuyTicket.Size = new System.Drawing.Size(108, 68);
             this.uxBuyTicket.TabIndex = 4;
             this.uxBuyTicket.Text = "Buy Ticket";
             this.uxBuyTicket.UseVisualStyleBackColor = true;
+            this.uxBuyTicket.Click += new System.EventHandler(this.uxBuyTicket_Click);
             // 
             // uxLogoutButton
             // 
             this.uxLogoutButton.Location = new System.Drawing.Point(256, 250);
-            this.uxLogoutButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uxLogoutButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxLogoutButton.Name = "uxLogoutButton";
             this.uxLogoutButton.Size = new System.Drawing.Size(113, 68);
             this.uxLogoutButton.TabIndex = 5;
             this.uxLogoutButton.Text = "Logout";
             this.uxLogoutButton.UseVisualStyleBackColor = true;
             this.uxLogoutButton.Click += new System.EventHandler(this.uxLogoutButton_Click);
-            // 
-            // uxIsShowing
-            // 
-            this.uxIsShowing.Text = "Is Currently Showing";
-            this.uxIsShowing.Width = 121;
             // 
             // CustomerView
             // 

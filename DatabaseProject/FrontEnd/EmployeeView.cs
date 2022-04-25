@@ -17,13 +17,13 @@ namespace FrontEnd
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
 
         BindingList<Movie> Movies = new BindingList<Movie>();
-
+        User CurUser { get; set; }
         private Movie _selectedMovie { get; set; }
-        public EmployeeView()
+        public EmployeeView(User u)
         {
             InitializeComponent();
             //AddDummyMovies(movies);
-
+            CurUser = u;
             List<Movie> movies = (List<Movie>)smr.RetrieveMovies();
             for (int i = 0; i < movies.Count; i++)
             {
@@ -85,7 +85,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui._modifyMovieControl = new ModifySelectedMovie(_selectedMovie);
+                ui._modifyMovieControl = new ModifySelectedMovie(_selectedMovie, CurUser);
                 ui.Controls.Add(ui._modifyMovieControl);
                 ui.Size = new Size(ui._modifyMovieControl.Width + 50, ui._modifyMovieControl.Height + 50);
             }
