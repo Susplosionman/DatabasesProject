@@ -37,10 +37,24 @@ namespace Data
             var d = new CreateDirectorDataDelegate(name);
             return executor.ExecuteNonQuery(d);
         }
+        public Review CreateReview(int uID, int rating, string comment, int mID)
+        {
+            var d = new CreateReviewDataDelegate(uID, rating, comment, mID);
+            return executor.ExecuteNonQuery(d);
+        }
+        public User CreateUser(string type, string username, string pw)
+        {
+            var d = new CreateUserDataDelegate(type, username, pw);
+            return executor.ExecuteNonQuery(d);
+        }
 
         public IReadOnlyList<Movie> RetrieveMovies()
         {
             return executor.ExecuteReader(new RetrieveMoviesDataDelegate());
+        }
+        public IReadOnlyList<User> RetrieveAllUsers()
+        {
+            return executor.ExecuteReader(new RetrieveAllUsersDataDelegate());
         }
 
         public void DeleteMovie(int id)

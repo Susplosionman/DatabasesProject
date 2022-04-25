@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Data;
+using Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,45 +14,133 @@ namespace FrontEnd
 {
     public partial class LoginControl : UserControl
     {
+        public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
+
+        private Dictionary<string, string> UserDictionary { get; set; } = new Dictionary<string, string>();
+        private Dictionary<string, string> UserTypeDictionary { get; set; } = new Dictionary<string, string>();
+        private List<User> Users { get; set; }
         public LoginControl()
         {
             InitializeComponent();
+
+            Users = (List<User>)smr.RetrieveAllUsers();
+            for (int i = 0; i < Users.Count; i++)
+            {
+                UserDictionary.Add(Users[i].Username, Users[i].Password);
+                UserTypeDictionary.Add(Users[i].Username, Users[i].Type);
+            }
         }
 
         private void uxEmployeeLogin_Click(object sender, EventArgs e)
         {
-            if (this.FindForm() is UserInterface ui)
+            if (UserDictionary.ContainsKey(uxUsernameTB.Text))
             {
-                // if ui.UserRepository contains User with username uxUsernameTB
-                // if User.Password == uxPasswordTB.Text
-                // ui.Controls.Remove(this);
-                // ui.Controls.Add(ui._employeeView)
-                // else uxResponseLabel.Text = "Incorrect Password";
-                //uxPasswordTB.Text = "";
-                // else
-                // uxResponseLabel.Text = "User does not exist"
-                ui.Controls.Remove(this);
-                ui.Controls.Add(ui._employeeView);
-                ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
+                if (UserDictionary.TryGetValue(uxUsernameTB.Text, out string pw))
+                {
+                    if (pw.Equals(uxPasswordTB.Text))
+                    {
+                        if (UserTypeDictionary[uxUsernameTB.Text].Equals("Employee"))
+                        {
+                            if (this.FindForm() is UserInterface ui)
+                            {
+                                ui.Controls.Remove(this);
+                                ui.Controls.Add(ui._employeeView);
+                                ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
+                            }
+                        }
+                        else
+                        {
+                            uxResponseLabel.Text = "User is not an employee.";
+                        }
+                        
+                    }
+                    else
+                    {
+                        uxResponseLabel.Text = "Incorrect Password.";
+                    }
+                }
             }
+            else
+            {
+                uxResponseLabel.Text = "User does not exist";
+            }
+           
 
         }
 
         private void uxCustomerLogin_Click(object sender, EventArgs e)
         {
+            if (UserDictionary.ContainsKey(uxUsernameTB.Text))
+            {
+                if (UserDictionary.TryGetValue(uxUsernameTB.Text, out string pw))
+                {
+                    if (pw.Equals(uxPasswordTB.Text))
+                    {
+                        if (UserTypeDictionary[uxUsernameTB.Text].Equals("Customer"))
+                        {
+                            if (this.FindForm() is UserInterface ui)
+                            {
+                                ui.Controls.Remove(this);
+                                ui.Controls.Add(new CustomerView());
+                                ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
+                            }
+                        }
+                        else
+                        {
+                            uxResponseLabel.Text = "User is not a customer.";
+                        }
+                    }
+                    else
+                    {
+                        uxResponseLabel.Text = "Incorrect Password.";
+                    }
+                }
+            }
+            else
+            {
+                uxResponseLabel.Text = "User does not exist";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             if (this.FindForm() is UserInterface ui)
             {
-                // if ui.UserRepository contains User with username uxUsernameTB
-                // if User.Password == uxPasswordTB.Text
-                // ui.Controls.Remove(this);
-                // ui.Controls.Add(ui._customerView)
-                // else uxResponseLabel.Text = "Incorrect Password";
-                //uxPasswordTB.Text = "";
-                // else
-                // uxResponseLabel.Text = "User does not exist"
                 ui.Controls.Remove(this);
                 ui.Controls.Add(new CustomerView());
                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                ui.Controls.Add(ui._employeeView);
+                ui.Size = new Size(ui._employeeView.Width + 50, ui._employeeView.Height + 50);
+            }
+        }
+
+        private void uxEmployeeRegisterButton_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                RegisterUserControl ruc = new RegisterUserControl(true);
+                ui.Controls.Remove(this);
+                ui.Controls.Add(ruc);
+                ui.Size = new Size(ruc.Width + 50, ruc.Height + 50);
+            }
+        }
+
+        private void uxCustomerRegisterButton_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                RegisterUserControl ruc = new RegisterUserControl(false);
+                ui.Controls.Remove(this);
+                ui.Controls.Add(ruc);
+                ui.Size = new Size(ruc.Width + 50, ruc.Height + 50);
             }
         }
     }

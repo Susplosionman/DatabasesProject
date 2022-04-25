@@ -58,6 +58,12 @@
     <Compile Include="AddOrEditShowing.Designer.cs">
       <DependentUpon>AddOrEditShowing.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyTicketControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BuyTicketControl.Designer.cs">
+      <DependentUpon>BuyTicketControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="EmployeeView.Designer.cs">
       <DependentUpon>EmployeeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveReviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeaveReviewControl.Designer.cs">
+      <DependentUpon>LeaveReviewControl.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginControl.cs">
       <SubType>UserControl</SubType>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterUserControl.Designer.cs">
+      <DependentUpon>RegisterUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +120,17 @@
     <EmbeddedResource Include="AddOrEditShowing.resx">
       <DependentUpon>AddOrEditShowing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BuyTicketControl.resx">
+      <DependentUpon>BuyTicketControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerView.resx">
       <DependentUpon>CustomerView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveReviewControl.resx">
+      <DependentUpon>LeaveReviewControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
@@ -126,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegisterUserControl.resx">
+      <DependentUpon>RegisterUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

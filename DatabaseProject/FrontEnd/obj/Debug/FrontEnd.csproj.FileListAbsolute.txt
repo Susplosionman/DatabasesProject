@@ -113,3 +113,6 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Deb
 C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
 C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
 C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.MovieInfoControl.resources
+C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.LeaveReviewControl.resources
+C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.BuyTicketControl.resources
+C:\Users\Connor\Source\Repos\DatabasesProjectv6\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.RegisterUserControl.resources

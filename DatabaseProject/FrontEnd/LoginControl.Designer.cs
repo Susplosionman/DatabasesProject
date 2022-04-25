@@ -34,6 +34,11 @@
             this.uxCustomerLogin = new System.Windows.Forms.Button();
             this.uxUsernameTB = new System.Windows.Forms.TextBox();
             this.uxPasswordTB = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.uxEmployeeRegisterButton = new System.Windows.Forms.Button();
+            this.uxCustomerRegisterButton = new System.Windows.Forms.Button();
+            this.uxResponseLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uxUsernameLabel
@@ -88,10 +93,64 @@
             this.uxPasswordTB.Size = new System.Drawing.Size(100, 20);
             this.uxPasswordTB.TabIndex = 5;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(179, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 65);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Bypass login to customer";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(181, 80);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 50);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "bypass login to employee";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // uxEmployeeRegisterButton
+            // 
+            this.uxEmployeeRegisterButton.Location = new System.Drawing.Point(17, 183);
+            this.uxEmployeeRegisterButton.Name = "uxEmployeeRegisterButton";
+            this.uxEmployeeRegisterButton.Size = new System.Drawing.Size(75, 46);
+            this.uxEmployeeRegisterButton.TabIndex = 10;
+            this.uxEmployeeRegisterButton.Text = "Register as Employee";
+            this.uxEmployeeRegisterButton.UseVisualStyleBackColor = true;
+            this.uxEmployeeRegisterButton.Click += new System.EventHandler(this.uxEmployeeRegisterButton_Click);
+            // 
+            // uxCustomerRegisterButton
+            // 
+            this.uxCustomerRegisterButton.Location = new System.Drawing.Point(100, 183);
+            this.uxCustomerRegisterButton.Name = "uxCustomerRegisterButton";
+            this.uxCustomerRegisterButton.Size = new System.Drawing.Size(75, 46);
+            this.uxCustomerRegisterButton.TabIndex = 11;
+            this.uxCustomerRegisterButton.Text = "Register as Customer";
+            this.uxCustomerRegisterButton.UseVisualStyleBackColor = true;
+            this.uxCustomerRegisterButton.Click += new System.EventHandler(this.uxCustomerRegisterButton_Click);
+            // 
+            // uxResponseLabel
+            // 
+            this.uxResponseLabel.AutoSize = true;
+            this.uxResponseLabel.Location = new System.Drawing.Point(43, 129);
+            this.uxResponseLabel.Name = "uxResponseLabel";
+            this.uxResponseLabel.Size = new System.Drawing.Size(132, 26);
+            this.uxResponseLabel.TabIndex = 12;
+            this.uxResponseLabel.Text = "Enter credentials to log in, \r\nor register below.";
+            // 
             // LoginControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxResponseLabel);
+            this.Controls.Add(this.uxCustomerRegisterButton);
+            this.Controls.Add(this.uxEmployeeRegisterButton);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.uxPasswordTB);
             this.Controls.Add(this.uxUsernameTB);
             this.Controls.Add(this.uxCustomerLogin);
@@ -99,7 +158,7 @@
             this.Controls.Add(this.uxPasswordLabel);
             this.Controls.Add(this.uxUsernameLabel);
             this.Name = "LoginControl";
-            this.Size = new System.Drawing.Size(191, 121);
+            this.Size = new System.Drawing.Size(272, 232);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +172,10 @@
         private System.Windows.Forms.Button uxCustomerLogin;
         private System.Windows.Forms.TextBox uxUsernameTB;
         private System.Windows.Forms.MaskedTextBox uxPasswordTB;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button uxEmployeeRegisterButton;
+        private System.Windows.Forms.Button uxCustomerRegisterButton;
+        private System.Windows.Forms.Label uxResponseLabel;
     }
 }

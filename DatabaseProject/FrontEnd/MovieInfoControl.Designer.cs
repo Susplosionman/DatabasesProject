@@ -38,6 +38,11 @@
             this.uxRatingLabel = new System.Windows.Forms.Label();
             this.uxActorsLabel2 = new System.Windows.Forms.Label();
             this.uxActorsLabel3 = new System.Windows.Forms.Label();
+            this.uxBackButton = new System.Windows.Forms.Button();
+            this.uxLeaveReviewButton = new System.Windows.Forms.Button();
+            this.uxShowingBox = new System.Windows.Forms.ListBox();
+            this.uxShowingsLabel = new System.Windows.Forms.Label();
+            this.uxBuyTicketButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxMovieName
@@ -130,10 +135,62 @@
             this.uxActorsLabel3.TabIndex = 10;
             this.uxActorsLabel3.Text = "Movie Name:";
             // 
+            // uxBackButton
+            // 
+            this.uxBackButton.Location = new System.Drawing.Point(3, 251);
+            this.uxBackButton.Name = "uxBackButton";
+            this.uxBackButton.Size = new System.Drawing.Size(111, 68);
+            this.uxBackButton.TabIndex = 11;
+            this.uxBackButton.Text = "Back";
+            this.uxBackButton.UseVisualStyleBackColor = true;
+            this.uxBackButton.Click += new System.EventHandler(this.uxBackButton_Click);
+            // 
+            // uxLeaveReviewButton
+            // 
+            this.uxLeaveReviewButton.Location = new System.Drawing.Point(148, 251);
+            this.uxLeaveReviewButton.Name = "uxLeaveReviewButton";
+            this.uxLeaveReviewButton.Size = new System.Drawing.Size(105, 68);
+            this.uxLeaveReviewButton.TabIndex = 12;
+            this.uxLeaveReviewButton.Text = "Leave Review";
+            this.uxLeaveReviewButton.UseVisualStyleBackColor = true;
+            this.uxLeaveReviewButton.Click += new System.EventHandler(this.uxLeaveReviewButton_Click);
+            // 
+            // uxShowingBox
+            // 
+            this.uxShowingBox.FormattingEnabled = true;
+            this.uxShowingBox.Location = new System.Drawing.Point(248, 36);
+            this.uxShowingBox.Name = "uxShowingBox";
+            this.uxShowingBox.Size = new System.Drawing.Size(120, 186);
+            this.uxShowingBox.TabIndex = 13;
+            // 
+            // uxShowingsLabel
+            // 
+            this.uxShowingsLabel.AutoSize = true;
+            this.uxShowingsLabel.Location = new System.Drawing.Point(276, 20);
+            this.uxShowingsLabel.Name = "uxShowingsLabel";
+            this.uxShowingsLabel.Size = new System.Drawing.Size(53, 13);
+            this.uxShowingsLabel.TabIndex = 14;
+            this.uxShowingsLabel.Text = "Showings";
+            // 
+            // uxBuyTicketButton
+            // 
+            this.uxBuyTicketButton.Location = new System.Drawing.Point(294, 251);
+            this.uxBuyTicketButton.Name = "uxBuyTicketButton";
+            this.uxBuyTicketButton.Size = new System.Drawing.Size(105, 68);
+            this.uxBuyTicketButton.TabIndex = 15;
+            this.uxBuyTicketButton.Text = "Buy Ticket";
+            this.uxBuyTicketButton.UseVisualStyleBackColor = true;
+            this.uxBuyTicketButton.Click += new System.EventHandler(this.uxBuyTicketButton_Click);
+            // 
             // MovieInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxBuyTicketButton);
+            this.Controls.Add(this.uxShowingsLabel);
+            this.Controls.Add(this.uxShowingBox);
+            this.Controls.Add(this.uxLeaveReviewButton);
+            this.Controls.Add(this.uxBackButton);
             this.Controls.Add(this.uxActorsLabel3);
             this.Controls.Add(this.uxActorsLabel2);
             this.Controls.Add(this.uxRatingLabel);
@@ -163,5 +220,10 @@
         private System.Windows.Forms.Label uxRatingLabel;
         private System.Windows.Forms.Label uxActorsLabel2;
         private System.Windows.Forms.Label uxActorsLabel3;
+        private System.Windows.Forms.Button uxBackButton;
+        private System.Windows.Forms.Button uxLeaveReviewButton;
+        private System.Windows.Forms.ListBox uxShowingBox;
+        private System.Windows.Forms.Label uxShowingsLabel;
+        private System.Windows.Forms.Button uxBuyTicketButton;
     }
 }

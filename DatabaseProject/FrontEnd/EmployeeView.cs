@@ -65,7 +65,7 @@ namespace FrontEnd
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(ui._loginControl);
+                ui.Controls.Add(new LoginControl());
                 ui.Size = new Size(ui._loginControl.Width + 50, ui._loginControl.Height + 50);
             }
         }
