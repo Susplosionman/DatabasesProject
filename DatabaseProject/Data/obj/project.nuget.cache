@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sL9rUWTn0+sHCPHYS+WsguGP8FQsP2q62Sp77LhKhjcrQnvdg/5HGaxWay+kD5bzSWnOn/XleSLZ2UVLL1IrKg==",
+  "dgSpecHash": "FQVZnJ4MMqmfj476ZKNsjEyt4GdptFPU2jKwJedHIXvOguWhXoTLPYHiS9QD3569p8Gl7CVYx3BgC0TWtvKw6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv5\\DatabaseProject\\Data\\Data.csproj",
+  "projectFilePath": "C:\\Users\\Connor\\source\\repos\\DatabasesProjectv4\\DatabaseProject\\Data\\Data.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
