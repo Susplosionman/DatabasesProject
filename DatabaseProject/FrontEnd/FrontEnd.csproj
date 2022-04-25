@@ -82,6 +82,12 @@
     <Compile Include="ModifySelectedMovie.Designer.cs">
       <DependentUpon>ModifySelectedMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovieInfoControl.Designer.cs">
+      <DependentUpon>MovieInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInterface.cs">
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifySelectedMovie.resx">
       <DependentUpon>ModifySelectedMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovieInfoControl.resx">
+      <DependentUpon>MovieInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

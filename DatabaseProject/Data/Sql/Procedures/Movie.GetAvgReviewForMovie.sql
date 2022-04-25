@@ -1,4 +1,4 @@
-﻿CREATE OR ALTER PROCEDURE Movie.AvgReviewForMovie
+﻿CREATE OR ALTER PROCEDURE Movie.GetAvgReviewForMovie
 	@MovieID INT
 AS
 

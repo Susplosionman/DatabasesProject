@@ -49,7 +49,7 @@ namespace FrontEnd
                 // else
                 // uxResponseLabel.Text = "User does not exist"
                 ui.Controls.Remove(this);
-                ui.Controls.Add(ui._customerView);
+                ui.Controls.Add(new CustomerView());
                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
             }
         }

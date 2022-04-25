@@ -54,7 +54,11 @@ namespace Data
             var d = new FetchDirectorDataDelegate(name);
             return executor.ExecuteReader(d);
         }
-
+        public Director FetchDirectorByID(int id)
+        {
+            var d = new FetchDirectorByIDDataDelegate(id);
+            return executor.ExecuteReader(d);
+        }
         public IReadOnlyList<Showing> RetrieveShowingsForMovie(int id)
         {
             return executor.ExecuteReader(new RetrieveShowingsForMovieDataDelegate(id));
@@ -70,5 +74,7 @@ namespace Data
             executor.ExecuteNonQuery(new DeleteShowingDataDelegate(id));
 
         }
+
+        
     }
 }
