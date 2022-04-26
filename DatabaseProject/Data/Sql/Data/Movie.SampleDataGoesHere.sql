@@ -61,7 +61,6 @@ VALUES
 	(N'Christopher Nolan'),
 	(N'Edward Zwick'),
 	(N'Robert Dalva'),
-	(N'Hayao Miyazaki'),
 	(N'Andrew Stanton'),
 	(N'Patrick Tatopoulos'),
 	(N'Gavin Hood'),
@@ -78,7 +77,6 @@ VALUES
 	(N'Roman Polanski'),
 	(N'Phillip Noyce'),
 	(N'Danny Boyle'),
-	(N'Ethan Coen'),
 	(N'Colin Levy'),
 	(N'Tony Goldwyn'),
 	(N'Marc Webb'),
@@ -92,7 +90,6 @@ VALUES
 	(N'Evan Viera');
 	
 	
-
 INSERT Movie.Movie(Name, ReleaseDate, Genre, DirectorID)
 SELECT M.Name, M.ReleaseDate, M.Genre, D.DirectorID
 FROM
@@ -152,10 +149,10 @@ FROM
  (N'The Curse of the Were-Rabbit', N'2005-10-05', N'family', N'Steve Box'),
  (N'The Worlds Fastest Indian', N'2006-02-03', N'biography', N'Roger Donaldson'),
 
-  (N'10 Days Out: Blues from the Backroads', N'2007-01-23', N'documentary, music', N'Noble Lincoln Jones'),
+  (N'10 Days Out: Blues from the Backroads', N'2007-01-23', N'music', N'Noble Lincoln Jones'),
  (N'I Am Legend', N'2007-12-14', N'thriller', N'Francis Lawrence'),
  (N'The Bourne Ultimatum', N'2007-08-03', N'action', N'Paul Greengrass'),
- (N'National Treasure: Book of Secrets', N'2007-12-21', N'action, adventure, mystery, thriller', N'Jon Turteltaub'),
+ (N'National Treasure: Book of Secrets', N'2007-12-21', N'adventure', N'Jon Turteltaub'),
  (N'Live Free or Die Hard', N'2007-06-22', N'action, crime, thriller', N'Len Wiseman'),
  (N'The Darjeeling Limited', N'2007-10-26', N'adventure, comedy, drama', N'Wes Anderson'),
  (N'Slipstream', N'2007-10-26', N'mystery', N'Anthony Hopkins'),
