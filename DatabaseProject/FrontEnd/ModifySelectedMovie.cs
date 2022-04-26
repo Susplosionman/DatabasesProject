@@ -49,6 +49,12 @@ namespace FrontEnd
         private void uxDeleteShowingButton_Click(object sender, EventArgs e)
         {
             Showing s = uxShowingList.SelectedItem as Showing;
+            List<ShowingAttendance> sa = (List<ShowingAttendance>)smr.RetrieveAttendeesForShowing(s.ShowingID);
+
+            
+            //delete each showing attendance
+            smr.DeleteShowingAttendance(s.ShowingID);
+
             smr.DeleteShowing(s.ShowingID);
             Showings.Remove(s);
             uxShowingList.Update();

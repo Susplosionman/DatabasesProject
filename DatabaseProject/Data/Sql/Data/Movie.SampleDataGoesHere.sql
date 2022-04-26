@@ -93,8 +93,8 @@ VALUES
 	
 	
 
-INSERT Movie.Movie(Name, ReleaseDate, Genre, DirectorID)
-SELECT M.Name, M.ReleaseDate, M.Genre, D.DirectorID
+INSERT Movie.Movie([Name], ReleaseDate, Genre, DirectorID)
+SELECT M.[Name], M.ReleaseDate, M.Genre, D.DirectorID
 FROM
 	(
 	VALUES

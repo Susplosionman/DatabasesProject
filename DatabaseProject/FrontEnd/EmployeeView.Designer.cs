@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uxTestAdd = new System.Windows.Forms.Button();
             this.uxSelectButton = new System.Windows.Forms.Button();
             this.uxDeleteSelectedButton = new System.Windows.Forms.Button();
             this.uxMovieBox = new System.Windows.Forms.ListBox();
             this.uxAddMovieButton = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // uxTestAdd
-            // 
-            this.uxTestAdd.Location = new System.Drawing.Point(3, 254);
-            this.uxTestAdd.Name = "uxTestAdd";
-            this.uxTestAdd.Size = new System.Drawing.Size(116, 23);
-            this.uxTestAdd.TabIndex = 1;
-            this.uxTestAdd.Text = "Test Add Movie";
-            this.uxTestAdd.UseVisualStyleBackColor = true;
-            this.uxTestAdd.Click += new System.EventHandler(this.uxTestAdd_Click);
             // 
             // uxSelectButton
             // 
@@ -104,7 +93,6 @@
             this.Controls.Add(this.uxMovieBox);
             this.Controls.Add(this.uxDeleteSelectedButton);
             this.Controls.Add(this.uxSelectButton);
-            this.Controls.Add(this.uxTestAdd);
             this.Name = "EmployeeView";
             this.Size = new System.Drawing.Size(413, 284);
             this.ResumeLayout(false);
@@ -112,7 +100,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button uxTestAdd;
         private System.Windows.Forms.Button uxSelectButton;
         private System.Windows.Forms.Button uxDeleteSelectedButton;
         private System.Windows.Forms.ListBox uxMovieBox;

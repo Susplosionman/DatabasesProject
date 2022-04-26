@@ -60,10 +60,18 @@ namespace Data
         {
             return executor.ExecuteReader(new RetrieveAllUsersDataDelegate());
         }
-
+        public IReadOnlyList<ShowingAttendance> RetrieveAttendeesForShowing(int id)
+        {
+            return executor.ExecuteReader(new RetrieveAttendeesForShowingDataDelegate(id));
+        }
         public void DeleteMovie(int id)
         {
             executor.ExecuteNonQuery(new DeleteMovieDataDelegate(id));
+
+        }
+        public void DeleteShowingAttendance(int id)
+        {
+            executor.ExecuteNonQuery(new DeleteShowingAttendanceDataDelegate(id));
 
         }
 

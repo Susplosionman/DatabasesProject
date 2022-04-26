@@ -34,18 +34,7 @@ namespace FrontEnd
             
             
         }
-        private void uxTestAdd_Click(object sender, EventArgs e)
-        {
-            smr.CreateDirector("Bob Jones");
-            smr.CreateMovie("TestMovie", new DateTimeOffset(), "testgenre", 1);
-            List<Movie> movies = (List<Movie>)smr.RetrieveMovies();
-            for (int i = 0; i < movies.Count; i++)
-            {
-                Movies.Add(movies[i]);
-            }
-            uxMovieBox.Update();
-
-        }
+        
         private void uxMovieBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _selectedMovie = (Movie)uxMovieBox.SelectedItem;
@@ -53,11 +42,12 @@ namespace FrontEnd
 
         private void uxDeleteSelectedButton_Click(object sender, EventArgs e)
         {
+            /*
             smr.DeleteMovie(_selectedMovie.MovieID);
             List<Movie> movies = (List<Movie>)smr.RetrieveMovies();
             
             Movies.Remove(_selectedMovie);
-            uxMovieBox.Update();
+            uxMovieBox.Update(); */
         }
 
         private void uxLogoutButton_Click(object sender, EventArgs e)
