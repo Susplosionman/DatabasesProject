@@ -64,7 +64,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\P
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"
-
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Movie.SampleDataGoesHere.sql"
 
 Write-Host "Rebuild completed."
 Write-Host ""
