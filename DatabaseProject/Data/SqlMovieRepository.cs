@@ -89,6 +89,14 @@ namespace Data
         {
             return executor.ExecuteReader(new RetrieveShowingsForMovieDataDelegate(id));
         }
+        public IReadOnlyList<Movie> RetrieveMoviesForUser(int id)
+        {
+            return executor.ExecuteReader(new RetrieveMoviesForUserDataDelegate(id));
+        }
+        public IReadOnlyList<Review> RetrieveReviewsForUser(int id)
+        {
+            return executor.ExecuteReader(new RetrieveReviewsForUserDataDelegate(id));
+        }
 
         public Showing CreateShowing(DateTimeOffset time, int price, int movieID)
         {

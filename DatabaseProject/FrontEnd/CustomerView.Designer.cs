@@ -36,6 +36,7 @@
             this.uxSeeMovieInfo = new System.Windows.Forms.Button();
             this.uxBuyTicket = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
+            this.uxUserProfileButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +59,7 @@
             this.uxListView.Location = new System.Drawing.Point(5, 23);
             this.uxListView.Margin = new System.Windows.Forms.Padding(1);
             this.uxListView.Name = "uxListView";
-            this.uxListView.Size = new System.Drawing.Size(364, 225);
+            this.uxListView.Size = new System.Drawing.Size(414, 225);
             this.uxListView.TabIndex = 2;
             this.uxListView.UseCompatibleStateImageBehavior = false;
             this.uxListView.View = System.Windows.Forms.View.Details;
@@ -66,7 +67,7 @@
             // uxMovieColumn
             // 
             this.uxMovieColumn.Text = "Movie";
-            this.uxMovieColumn.Width = 152;
+            this.uxMovieColumn.Width = 205;
             // 
             // uxAvgRating
             // 
@@ -76,14 +77,14 @@
             // uxIsShowing
             // 
             this.uxIsShowing.Text = "Is Currently Showing";
-            this.uxIsShowing.Width = 121;
+            this.uxIsShowing.Width = 136;
             // 
             // uxSeeMovieInfo
             // 
-            this.uxSeeMovieInfo.Location = new System.Drawing.Point(132, 251);
+            this.uxSeeMovieInfo.Location = new System.Drawing.Point(225, 250);
             this.uxSeeMovieInfo.Margin = new System.Windows.Forms.Padding(1);
             this.uxSeeMovieInfo.Name = "uxSeeMovieInfo";
-            this.uxSeeMovieInfo.Size = new System.Drawing.Size(108, 68);
+            this.uxSeeMovieInfo.Size = new System.Drawing.Size(88, 68);
             this.uxSeeMovieInfo.TabIndex = 3;
             this.uxSeeMovieInfo.Text = "See Movie Info";
             this.uxSeeMovieInfo.UseVisualStyleBackColor = true;
@@ -91,10 +92,10 @@
             // 
             // uxBuyTicket
             // 
-            this.uxBuyTicket.Location = new System.Drawing.Point(5, 250);
+            this.uxBuyTicket.Location = new System.Drawing.Point(118, 250);
             this.uxBuyTicket.Margin = new System.Windows.Forms.Padding(1);
             this.uxBuyTicket.Name = "uxBuyTicket";
-            this.uxBuyTicket.Size = new System.Drawing.Size(108, 68);
+            this.uxBuyTicket.Size = new System.Drawing.Size(95, 68);
             this.uxBuyTicket.TabIndex = 4;
             this.uxBuyTicket.Text = "Buy Ticket";
             this.uxBuyTicket.UseVisualStyleBackColor = true;
@@ -102,19 +103,31 @@
             // 
             // uxLogoutButton
             // 
-            this.uxLogoutButton.Location = new System.Drawing.Point(256, 250);
+            this.uxLogoutButton.Location = new System.Drawing.Point(324, 250);
             this.uxLogoutButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxLogoutButton.Name = "uxLogoutButton";
-            this.uxLogoutButton.Size = new System.Drawing.Size(113, 68);
+            this.uxLogoutButton.Size = new System.Drawing.Size(95, 68);
             this.uxLogoutButton.TabIndex = 5;
             this.uxLogoutButton.Text = "Logout";
             this.uxLogoutButton.UseVisualStyleBackColor = true;
             this.uxLogoutButton.Click += new System.EventHandler(this.uxLogoutButton_Click);
             // 
+            // uxUserProfileButton
+            // 
+            this.uxUserProfileButton.Location = new System.Drawing.Point(5, 250);
+            this.uxUserProfileButton.Margin = new System.Windows.Forms.Padding(1);
+            this.uxUserProfileButton.Name = "uxUserProfileButton";
+            this.uxUserProfileButton.Size = new System.Drawing.Size(95, 68);
+            this.uxUserProfileButton.TabIndex = 6;
+            this.uxUserProfileButton.Text = "Go To User Profile";
+            this.uxUserProfileButton.UseVisualStyleBackColor = true;
+            this.uxUserProfileButton.Click += new System.EventHandler(this.uxUserProfileButton_Click);
+            // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxUserProfileButton);
             this.Controls.Add(this.uxLogoutButton);
             this.Controls.Add(this.uxBuyTicket);
             this.Controls.Add(this.uxSeeMovieInfo);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.Button uxBuyTicket;
         private System.Windows.Forms.Button uxLogoutButton;
         private System.Windows.Forms.ColumnHeader uxIsShowing;
+        private System.Windows.Forms.Button uxUserProfileButton;
     }
 }

@@ -141,3 +141,4 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\FrontEnd\obj\Deb
 C:\Users\Connor\source\repos\DatabasesProjectv7\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.CopyComplete
 C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
 C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.UserProfile.resources

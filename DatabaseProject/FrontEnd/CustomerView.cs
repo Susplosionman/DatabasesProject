@@ -99,5 +99,19 @@ namespace FrontEnd
                 ui.Size = new Size(btc.Width + 50, btc.Height + 50);
             }
         }
+
+        private void uxUserProfileButton_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+
+                
+                UserProfile up = new UserProfile(CurUser);
+
+                ui.Controls.Add(up);
+                ui.Size = new Size(up.Width + 50, up.Height + 50);
+            }
+        }
     }
 }

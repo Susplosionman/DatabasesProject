@@ -46,7 +46,6 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\T
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Review.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.ShowingAttendance.sql"
 
-
 #Write-Host "Stored procedures..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateMovie.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateDirector.sql"
@@ -63,6 +62,8 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\P
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.CreateShowingAttendance.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveAttendeesForShowing.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.DeleteShowingAttendance.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveMoviesForUser.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveReviewsForUser.sql"
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"
