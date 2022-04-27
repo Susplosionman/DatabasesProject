@@ -57,7 +57,7 @@
             // 
             this.uxGetShowingStats.Location = new System.Drawing.Point(102, 246);
             this.uxGetShowingStats.Name = "uxGetShowingStats";
-            this.uxGetShowingStats.Size = new System.Drawing.Size(114, 49);
+            this.uxGetShowingStats.Size = new System.Drawing.Size(107, 49);
             this.uxGetShowingStats.TabIndex = 2;
             this.uxGetShowingStats.Text = "Stats For Showings in Specified TimeFrame";
             this.uxGetShowingStats.UseVisualStyleBackColor = true;
