@@ -61,3 +61,11 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\DataAccess\obj\D
 C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.dll
 C:\Users\Connor\Source\Repos\DatabasesProjectv7\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.pdb
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\bin\Debug\net461\DataAccess.dll
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\bin\Debug\net461\DataAccess.pdb
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csprojAssemblyReference.cache
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.AssemblyInfoInputs.cache
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.AssemblyInfo.cs
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.CoreCompileInputs.cache
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.dll
+E:\Coding Projects\DatabaseProject\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.pdb
