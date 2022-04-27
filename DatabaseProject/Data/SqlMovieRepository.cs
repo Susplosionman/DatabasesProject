@@ -117,7 +117,17 @@ namespace Data
             executor.ExecuteNonQuery(new DeleteShowingDataDelegate(id));
 
         }
+        public Dictionary<string,List<string>> GetAllMoviesGrossSales()
+        {
+            return executor.ExecuteReader(new MovieTotalGrossDataDelegate());
 
-        
+        }
+        public Dictionary<string, List<string>> RetrieveShowingStats(DateTimeOffset from, DateTimeOffset to)
+        {
+            return executor.ExecuteReader(new RetrieveRecentShowingStatsDataDelegate(from,to));
+
+        }
+
+
     }
 }

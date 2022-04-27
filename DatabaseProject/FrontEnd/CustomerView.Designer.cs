@@ -59,7 +59,7 @@
             this.uxListView.Location = new System.Drawing.Point(5, 23);
             this.uxListView.Margin = new System.Windows.Forms.Padding(1);
             this.uxListView.Name = "uxListView";
-            this.uxListView.Size = new System.Drawing.Size(414, 225);
+            this.uxListView.Size = new System.Drawing.Size(482, 225);
             this.uxListView.TabIndex = 2;
             this.uxListView.UseCompatibleStateImageBehavior = false;
             this.uxListView.View = System.Windows.Forms.View.Details;
@@ -67,7 +67,7 @@
             // uxMovieColumn
             // 
             this.uxMovieColumn.Text = "Movie";
-            this.uxMovieColumn.Width = 205;
+            this.uxMovieColumn.Width = 253;
             // 
             // uxAvgRating
             // 
@@ -81,7 +81,7 @@
             // 
             // uxSeeMovieInfo
             // 
-            this.uxSeeMovieInfo.Location = new System.Drawing.Point(225, 250);
+            this.uxSeeMovieInfo.Location = new System.Drawing.Point(266, 250);
             this.uxSeeMovieInfo.Margin = new System.Windows.Forms.Padding(1);
             this.uxSeeMovieInfo.Name = "uxSeeMovieInfo";
             this.uxSeeMovieInfo.Size = new System.Drawing.Size(88, 68);
@@ -92,7 +92,7 @@
             // 
             // uxBuyTicket
             // 
-            this.uxBuyTicket.Location = new System.Drawing.Point(118, 250);
+            this.uxBuyTicket.Location = new System.Drawing.Point(136, 250);
             this.uxBuyTicket.Margin = new System.Windows.Forms.Padding(1);
             this.uxBuyTicket.Name = "uxBuyTicket";
             this.uxBuyTicket.Size = new System.Drawing.Size(95, 68);
@@ -103,7 +103,7 @@
             // 
             // uxLogoutButton
             // 
-            this.uxLogoutButton.Location = new System.Drawing.Point(324, 250);
+            this.uxLogoutButton.Location = new System.Drawing.Point(392, 250);
             this.uxLogoutButton.Margin = new System.Windows.Forms.Padding(1);
             this.uxLogoutButton.Name = "uxLogoutButton";
             this.uxLogoutButton.Size = new System.Drawing.Size(95, 68);
@@ -134,7 +134,7 @@
             this.Controls.Add(this.uxListView);
             this.Controls.Add(this.label1);
             this.Name = "CustomerView";
-            this.Size = new System.Drawing.Size(639, 319);
+            this.Size = new System.Drawing.Size(490, 319);
             this.ResumeLayout(false);
             this.PerformLayout();
 

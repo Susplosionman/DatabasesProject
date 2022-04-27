@@ -24,7 +24,7 @@ namespace Data.DataDelegates
         {
             if (reader.Read())
             {
-                return new Review(-1, -1, reader.GetInt32("AvgRatingForMovie"), "No comment", -1);
+                return new Review(-1, -1, reader.GetDecimal("AvgRatingForMovie"), "No comment", -1);
             }
             return null;
         }

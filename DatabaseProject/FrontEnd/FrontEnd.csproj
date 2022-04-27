@@ -76,6 +76,12 @@
     <Compile Include="EmployeeView.Designer.cs">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetTimeframe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetTimeframe.Designer.cs">
+      <DependentUpon>GetTimeframe.cs</DependentUpon>
+    </Compile>
     <Compile Include="LeaveReviewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     <Compile Include="RegisterUserControl.Designer.cs">
       <DependentUpon>RegisterUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TheatreInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TheatreInfoControl.Designer.cs">
+      <DependentUpon>TheatreInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
     <EmbeddedResource Include="EmployeeView.resx">
       <DependentUpon>EmployeeView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GetTimeframe.resx">
+      <DependentUpon>GetTimeframe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LeaveReviewControl.resx">
       <DependentUpon>LeaveReviewControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +173,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterUserControl.resx">
       <DependentUpon>RegisterUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheatreInfoControl.resx">
+      <DependentUpon>TheatreInfoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserProfile.resx">
       <DependentUpon>UserProfile.cs</DependentUpon>

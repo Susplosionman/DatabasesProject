@@ -31,7 +31,7 @@ namespace Data.DataDelegates
                 reviews.Add(new Review(
                    reader.GetInt32("ReviewID"),
                    UserID,
-                   reader.GetInt32("Rating"),
+                   reader.GetDecimal("Rating"),
                    reader.GetString("Comment"),
                    reader.GetInt32("MovieID")));
             }

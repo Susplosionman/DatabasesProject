@@ -33,6 +33,7 @@
             this.uxMovieBox = new System.Windows.Forms.ListBox();
             this.uxAddMovieButton = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
+            this.uxViewTheatreInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uxSelectButton
@@ -84,17 +85,28 @@
             this.uxLogoutButton.UseVisualStyleBackColor = true;
             this.uxLogoutButton.Click += new System.EventHandler(this.uxLogoutButton_Click);
             // 
+            // uxViewTheatreInfo
+            // 
+            this.uxViewTheatreInfo.Location = new System.Drawing.Point(3, 247);
+            this.uxViewTheatreInfo.Name = "uxViewTheatreInfo";
+            this.uxViewTheatreInfo.Size = new System.Drawing.Size(87, 43);
+            this.uxViewTheatreInfo.TabIndex = 11;
+            this.uxViewTheatreInfo.Text = "View Theatre Info";
+            this.uxViewTheatreInfo.UseVisualStyleBackColor = true;
+            this.uxViewTheatreInfo.Click += new System.EventHandler(this.uxViewTheatreInfo_Click);
+            // 
             // EmployeeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxViewTheatreInfo);
             this.Controls.Add(this.uxLogoutButton);
             this.Controls.Add(this.uxAddMovieButton);
             this.Controls.Add(this.uxMovieBox);
             this.Controls.Add(this.uxDeleteSelectedButton);
             this.Controls.Add(this.uxSelectButton);
             this.Name = "EmployeeView";
-            this.Size = new System.Drawing.Size(413, 284);
+            this.Size = new System.Drawing.Size(413, 293);
             this.ResumeLayout(false);
 
         }
@@ -105,5 +117,6 @@
         private System.Windows.Forms.ListBox uxMovieBox;
         private System.Windows.Forms.Button uxAddMovieButton;
         private System.Windows.Forms.Button uxLogoutButton;
+        private System.Windows.Forms.Button uxViewTheatreInfo;
     }
 }

@@ -13,7 +13,7 @@ namespace Data.DataDelegates
     {
         
         public int UserID { get; set; }
-        public int Rating { get; set; }
+        public decimal Rating { get; set; }
         public string Comment { get; set; }
         public int MovieID { get; set; }
 

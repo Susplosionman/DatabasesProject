@@ -80,5 +80,16 @@ namespace FrontEnd
                 ui.Size = new Size(ui._modifyMovieControl.Width + 50, ui._modifyMovieControl.Height + 50);
             }
         }
+
+        private void uxViewTheatreInfo_Click(object sender, EventArgs e)
+        {
+            if (this.FindForm() is UserInterface ui)
+            {
+                ui.Controls.Remove(this);
+                TheatreInfoControl tic= new TheatreInfoControl(CurUser);
+                ui.Controls.Add(tic);
+                ui.Size = new Size(tic.Width + 50, tic.Height + 50);
+            }
+        }
     }
 }

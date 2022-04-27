@@ -28,7 +28,7 @@ namespace Data.DataDelegates
             }
             else
             {
-                return new Review(reader.GetInt32("ReviewID"), reader.GetInt32("UserID"), reader.GetInt32("Rating"), reader.GetString("Comment"), reader.GetInt32("MovieID"));
+                return new Review(reader.GetInt32("ReviewID"), reader.GetInt32("UserID"), reader.GetDecimal("Rating"), reader.GetString("Comment"), reader.GetInt32("MovieID"));
             }
         }
     }

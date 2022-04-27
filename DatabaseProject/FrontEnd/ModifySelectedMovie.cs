@@ -26,6 +26,7 @@ namespace FrontEnd
             CurMovie = m;
             CurUser = u;
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(m.MovieID);
+            
             for (int i = 0; i < showings.Count; i++)
             {
                 Showings.Add(showings[i]);

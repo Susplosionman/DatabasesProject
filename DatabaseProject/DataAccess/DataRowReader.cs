@@ -25,6 +25,10 @@ namespace DataAccess
         {
             return GetValue(name, reader.GetInt32);
         }
+        public decimal GetDecimal(string name)
+        {
+            return GetValue(name, reader.GetDecimal);
+        }
 
         public byte GetByte(string name)
         {
