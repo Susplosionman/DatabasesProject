@@ -6,7 +6,7 @@ BEGIN
 		UserID INT NOT NULL
 			REFERENCES Movie.[User](UserID),
 		Rating INT NOT NULL,
-		Comment NVARCHAR(64) NOT NULL, -- may have to make this a larger size?
+		Comment NVARCHAR(300) NOT NULL, -- may have to make this a larger size?
 		MovieID INT NOT NULL
 			REFERENCES Movie.Movie(MovieID)
 	);
