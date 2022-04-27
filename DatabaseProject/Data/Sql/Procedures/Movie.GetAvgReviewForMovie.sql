@@ -2,10 +2,8 @@
 	@MovieID INT
 AS
 
-SELECT SUM(R.Rating) / Count(R.ReviewID) AS AvgRatingForMovie
-FROM Movie.Review R
-JOIN Movie.Movie M ON M.MovieID = R.MovieID
+SELECT SUM(R.Rating) / COUNT(*) AS AvgRatingForMovie
+FROM Movie.Movie M
+	INNER JOIN Movie.Review R ON R.MovieID = M.MovieID
 WHERE M.MovieID = @MovieID
 GO
-
---THIS QUERY IS NOT CORRECT
