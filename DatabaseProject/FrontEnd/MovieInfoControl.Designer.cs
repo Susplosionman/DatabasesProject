@@ -30,14 +30,10 @@
         {
             this.uxMovieName = new System.Windows.Forms.Label();
             this.uxDirector = new System.Windows.Forms.Label();
-            this.uxActors = new System.Windows.Forms.Label();
             this.uxRating = new System.Windows.Forms.Label();
             this.uxMovieLabel = new System.Windows.Forms.Label();
             this.uxDirectorLabel = new System.Windows.Forms.Label();
-            this.uxActorsLabel1 = new System.Windows.Forms.Label();
             this.uxRatingLabel = new System.Windows.Forms.Label();
-            this.uxActorsLabel2 = new System.Windows.Forms.Label();
-            this.uxActorsLabel3 = new System.Windows.Forms.Label();
             this.uxBackButton = new System.Windows.Forms.Button();
             this.uxLeaveReviewButton = new System.Windows.Forms.Button();
             this.uxShowingBox = new System.Windows.Forms.ListBox();
@@ -48,7 +44,7 @@
             // uxMovieName
             // 
             this.uxMovieName.AutoSize = true;
-            this.uxMovieName.Location = new System.Drawing.Point(55, 36);
+            this.uxMovieName.Location = new System.Drawing.Point(12, 36);
             this.uxMovieName.Name = "uxMovieName";
             this.uxMovieName.Size = new System.Drawing.Size(70, 13);
             this.uxMovieName.TabIndex = 0;
@@ -57,25 +53,16 @@
             // uxDirector
             // 
             this.uxDirector.AutoSize = true;
-            this.uxDirector.Location = new System.Drawing.Point(55, 84);
+            this.uxDirector.Location = new System.Drawing.Point(12, 84);
             this.uxDirector.Name = "uxDirector";
             this.uxDirector.Size = new System.Drawing.Size(47, 13);
             this.uxDirector.TabIndex = 1;
             this.uxDirector.Text = "Director:";
             // 
-            // uxActors
-            // 
-            this.uxActors.AutoSize = true;
-            this.uxActors.Location = new System.Drawing.Point(55, 133);
-            this.uxActors.Name = "uxActors";
-            this.uxActors.Size = new System.Drawing.Size(40, 13);
-            this.uxActors.TabIndex = 2;
-            this.uxActors.Text = "Actors:";
-            // 
             // uxRating
             // 
             this.uxRating.AutoSize = true;
-            this.uxRating.Location = new System.Drawing.Point(54, 214);
+            this.uxRating.Location = new System.Drawing.Point(12, 136);
             this.uxRating.Name = "uxRating";
             this.uxRating.Size = new System.Drawing.Size(41, 13);
             this.uxRating.TabIndex = 3;
@@ -84,7 +71,7 @@
             // uxMovieLabel
             // 
             this.uxMovieLabel.AutoSize = true;
-            this.uxMovieLabel.Location = new System.Drawing.Point(145, 36);
+            this.uxMovieLabel.Location = new System.Drawing.Point(88, 36);
             this.uxMovieLabel.Name = "uxMovieLabel";
             this.uxMovieLabel.Size = new System.Drawing.Size(70, 13);
             this.uxMovieLabel.TabIndex = 5;
@@ -93,47 +80,20 @@
             // uxDirectorLabel
             // 
             this.uxDirectorLabel.AutoSize = true;
-            this.uxDirectorLabel.Location = new System.Drawing.Point(145, 84);
+            this.uxDirectorLabel.Location = new System.Drawing.Point(88, 84);
             this.uxDirectorLabel.Name = "uxDirectorLabel";
             this.uxDirectorLabel.Size = new System.Drawing.Size(70, 13);
             this.uxDirectorLabel.TabIndex = 6;
             this.uxDirectorLabel.Text = "Movie Name:";
             // 
-            // uxActorsLabel1
-            // 
-            this.uxActorsLabel1.AutoSize = true;
-            this.uxActorsLabel1.Location = new System.Drawing.Point(145, 133);
-            this.uxActorsLabel1.Name = "uxActorsLabel1";
-            this.uxActorsLabel1.Size = new System.Drawing.Size(70, 13);
-            this.uxActorsLabel1.TabIndex = 7;
-            this.uxActorsLabel1.Text = "Movie Name:";
-            // 
             // uxRatingLabel
             // 
             this.uxRatingLabel.AutoSize = true;
-            this.uxRatingLabel.Location = new System.Drawing.Point(145, 214);
+            this.uxRatingLabel.Location = new System.Drawing.Point(88, 136);
             this.uxRatingLabel.Name = "uxRatingLabel";
             this.uxRatingLabel.Size = new System.Drawing.Size(70, 13);
             this.uxRatingLabel.TabIndex = 8;
             this.uxRatingLabel.Text = "Movie Name:";
-            // 
-            // uxActorsLabel2
-            // 
-            this.uxActorsLabel2.AutoSize = true;
-            this.uxActorsLabel2.Location = new System.Drawing.Point(145, 155);
-            this.uxActorsLabel2.Name = "uxActorsLabel2";
-            this.uxActorsLabel2.Size = new System.Drawing.Size(70, 13);
-            this.uxActorsLabel2.TabIndex = 9;
-            this.uxActorsLabel2.Text = "Movie Name:";
-            // 
-            // uxActorsLabel3
-            // 
-            this.uxActorsLabel3.AutoSize = true;
-            this.uxActorsLabel3.Location = new System.Drawing.Point(145, 178);
-            this.uxActorsLabel3.Name = "uxActorsLabel3";
-            this.uxActorsLabel3.Size = new System.Drawing.Size(70, 13);
-            this.uxActorsLabel3.TabIndex = 10;
-            this.uxActorsLabel3.Text = "Movie Name:";
             // 
             // uxBackButton
             // 
@@ -191,14 +151,10 @@
             this.Controls.Add(this.uxShowingBox);
             this.Controls.Add(this.uxLeaveReviewButton);
             this.Controls.Add(this.uxBackButton);
-            this.Controls.Add(this.uxActorsLabel3);
-            this.Controls.Add(this.uxActorsLabel2);
             this.Controls.Add(this.uxRatingLabel);
-            this.Controls.Add(this.uxActorsLabel1);
             this.Controls.Add(this.uxDirectorLabel);
             this.Controls.Add(this.uxMovieLabel);
             this.Controls.Add(this.uxRating);
-            this.Controls.Add(this.uxActors);
             this.Controls.Add(this.uxDirector);
             this.Controls.Add(this.uxMovieName);
             this.Name = "MovieInfoControl";
@@ -212,14 +168,10 @@
 
         private System.Windows.Forms.Label uxMovieName;
         private System.Windows.Forms.Label uxDirector;
-        private System.Windows.Forms.Label uxActors;
         private System.Windows.Forms.Label uxRating;
         private System.Windows.Forms.Label uxMovieLabel;
         private System.Windows.Forms.Label uxDirectorLabel;
-        private System.Windows.Forms.Label uxActorsLabel1;
         private System.Windows.Forms.Label uxRatingLabel;
-        private System.Windows.Forms.Label uxActorsLabel2;
-        private System.Windows.Forms.Label uxActorsLabel3;
         private System.Windows.Forms.Button uxBackButton;
         private System.Windows.Forms.Button uxLeaveReviewButton;
         private System.Windows.Forms.ListBox uxShowingBox;

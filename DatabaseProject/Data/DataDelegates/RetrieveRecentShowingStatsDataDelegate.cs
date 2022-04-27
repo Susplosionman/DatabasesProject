@@ -32,7 +32,7 @@ namespace Data.DataDelegates
 
             while (reader.Read())
             {
-                stats.Add(reader.GetDateTimeOffset("ShowTime").ToString(), new List<string> {reader.GetString("MovieName"), reader.GetInt32("TicketSales").ToString(), reader.GetDecimal("AverageReview").ToString() });
+                stats.Add(reader.GetDateTimeOffset("ShowTime").ToString(), new List<string> {reader.GetString("MovieName"), reader.GetInt32("TicketSales").ToString(), String.Format("{0:0.00}", reader.GetDecimal("AverageReview")) });
             }
 
             return stats;

@@ -40,7 +40,7 @@
             this.uxDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uxDataView.Location = new System.Drawing.Point(4, 24);
             this.uxDataView.Name = "uxDataView";
-            this.uxDataView.Size = new System.Drawing.Size(419, 215);
+            this.uxDataView.Size = new System.Drawing.Size(523, 215);
             this.uxDataView.TabIndex = 0;
             // 
             // uxGetMovieGrossSales
@@ -65,7 +65,7 @@
             // 
             // uxBackButton
             // 
-            this.uxBackButton.Location = new System.Drawing.Point(319, 246);
+            this.uxBackButton.Location = new System.Drawing.Point(423, 245);
             this.uxBackButton.Name = "uxBackButton";
             this.uxBackButton.Size = new System.Drawing.Size(104, 49);
             this.uxBackButton.TabIndex = 3;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.uxGetMovieGrossSales);
             this.Controls.Add(this.uxDataView);
             this.Name = "TheatreInfoControl";
-            this.Size = new System.Drawing.Size(426, 298);
+            this.Size = new System.Drawing.Size(530, 298);
             ((System.ComponentModel.ISupportInitialize)(this.uxDataView)).EndInit();
             this.ResumeLayout(false);
 

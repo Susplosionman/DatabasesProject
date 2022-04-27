@@ -37,7 +37,7 @@ namespace FrontEnd
         {
             if (this.FindForm() is UserInterface ui)
             {
-                MovieInfoControl mic = new MovieInfoControl(CurMovie, CurUser);
+                CustomerView mic = new CustomerView(CurUser);
                 ui.Controls.Remove(this);
                 ui.Controls.Add(mic);
                 ui.Size = new Size(mic.Width + 50, mic.Height + 50);

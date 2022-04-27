@@ -39,6 +39,8 @@ namespace FrontEnd
             uxDataView.Columns.Add("Values", "Gross Sales");
             foreach (KeyValuePair<string, List<string>> item in grossDic)
             {
+               
+
                 uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1], item.Value[2], item.Value[3]);
             }
             

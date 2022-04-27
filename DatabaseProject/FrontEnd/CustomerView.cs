@@ -35,8 +35,8 @@ namespace FrontEnd
                 // List<Review> list = RetrieveReviewsForMovie(Movies[i].MovieID);
                 // if (list.Count > 0) { do stuff } else {dont do stuff}
                 Review r = smr.GetAvgReviewsForMovie(Movies[i].MovieID);
-                item.SubItems.Add(r.Rating.ToString());
-
+                //item.SubItems.Add(r.Rating.ToString());
+                item.SubItems.Add(String.Format("{0:0.00}", r.Rating));
                 if (showingsForMovieI.Count > 0)
                 {
                     item.SubItems.Add("Yes");
