@@ -47,5 +47,20 @@ namespace FrontEnd
                 ui.Size = new Size(ui._customerView.Width + 50, ui._customerView.Height + 50);
             }
         }
+
+        private void uxDeleteReview_Click(object sender, EventArgs e)
+        {
+            if (uxDataGrid.SelectedRows.Count > 0)
+            {
+                if (uxDataGrid.CurrentRow.DataBoundItem is Review r) 
+                {
+                    smr.DeleteReview(r.ReviewID);
+                    Reviews = (List<Review>)smr.RetrieveReviewsForUser(CurUser.UserID);
+                    uxDataGrid.DataSource = Reviews;
+                    uxDataGrid.Refresh();
+                }
+                
+            }
+        }
     }
 }

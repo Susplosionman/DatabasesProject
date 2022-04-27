@@ -69,6 +69,11 @@ namespace Data
             executor.ExecuteNonQuery(new DeleteMovieDataDelegate(id));
 
         }
+        public void DeleteReview(int id)
+        {
+            executor.ExecuteNonQuery(new DeleteReviewDataDelegate(id));
+
+        }
         public void DeleteShowingAttendance(int id)
         {
             executor.ExecuteNonQuery(new DeleteShowingAttendanceDataDelegate(id));
@@ -96,6 +101,10 @@ namespace Data
         public IReadOnlyList<Review> RetrieveReviewsForUser(int id)
         {
             return executor.ExecuteReader(new RetrieveReviewsForUserDataDelegate(id));
+        }
+        public Review GetAvgReviewsForMovie(int id)
+        {
+            return executor.ExecuteReader(new GetAvgReviewsForMovieDataDelegate(id));
         }
 
         public Showing CreateShowing(DateTimeOffset time, int price, int movieID)

@@ -32,7 +32,10 @@ namespace FrontEnd
             {
                 ListViewItem item = new ListViewItem(Movies[i].ToString());
                 List<Showing> showingsForMovieI = (List<Showing>)smr.RetrieveShowingsForMovie(Movies[i].MovieID);
-                item.SubItems.Add("aint got no ratin yet");
+                // List<Review> list = RetrieveReviewsForMovie(Movies[i].MovieID);
+                // if (list.Count > 0) { do stuff } else {dont do stuff}
+                Review r = smr.GetAvgReviewsForMovie(Movies[i].MovieID);
+                item.SubItems.Add(r.Rating.ToString());
 
                 if (showingsForMovieI.Count > 0)
                 {
