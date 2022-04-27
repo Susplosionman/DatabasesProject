@@ -1,4 +1,5 @@
 ﻿CREATE OR ALTER PROCEDURE Movie.MovieTotalGross
+	@HighestRank INT
 AS
 
 WITH Aggregates(ShowingID, MovieID, GrossSales) AS
@@ -9,11 +10,12 @@ WITH Aggregates(ShowingID, MovieID, GrossSales) AS
 	GROUP BY S.ShowingID, S.MovieID, S.TicketPrice
 )
 
+SELECT M.[Name], M.Genre, M.ReleaseDate, D.[Name], SUM(A.GrossSales) AS GrossSales, RANK() OVER (ORDER BY GrossSales) AS MovieRank
 SELECT M.[Name], M.Genre, M.ReleaseDate, D.[Name], ISNULL(SUM(A.GrossSales),0) AS GrossSales
 FROM Movie.Movie M
 	INNER JOIN Movie.Director D ON D.DirectorID = M.DirectorID
 	INNER JOIN Aggregates A ON A.MovieID = M.MovieID
 GROUP BY M.[Name], M.Genre, M.ReleaseDate, D.[Name]
-ORDER BY GrossSales DESC
+HAVING RANK() OVER (ORDER BY GrossSales) <= @HighestRank
 
 GO
