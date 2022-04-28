@@ -36,6 +36,7 @@ namespace FrontEnd
             {
                 uxBuyTicketButton.Enabled = true;
             }
+            
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)
@@ -51,8 +52,23 @@ namespace FrontEnd
 
         private void uxBuyTicketButton_Click(object sender, EventArgs e)
         {
+            
             Showing s = uxShowingBox.SelectedItem as Showing;
-            smr.CreateShowingAttendance(CurUser.UserID, s.ShowingID);
+
+            List<ShowingAttendance> attendees = (List<ShowingAttendance>)smr.RetrieveAttendeesForShowing(s.ShowingID);
+            
+            
+            if (!UserAlreadyAttendingShowing(attendees))
+            {
+                smr.CreateShowingAttendance(CurUser.UserID, s.ShowingID);
+                uxBuyTicketButton.Enabled = false;
+            }
+            else
+            {
+                uxBuyTicketButton.Enabled = false;
+                label1.Text = "Failed. Not allowed to buy more tickets for this showing.";
+            }
+            
         }
 
         private void uxShowingBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +81,17 @@ namespace FrontEnd
             {
                 uxBuyTicketButton.Enabled = true;
             }
+        }
+        private bool UserAlreadyAttendingShowing(List<ShowingAttendance> sa)
+        {
+            for (int i = 0; i < sa.Count; i++)
+            {
+                if (sa[i].UserID == CurUser.UserID)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
