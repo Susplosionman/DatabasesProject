@@ -12,7 +12,7 @@ WITH Aggregates(ShowingID, ShowTime, MovieID, TicketSales) AS
 	GROUP BY S.ShowingID, S.ShowTime, S.MovieID, S.TicketPrice
 )
 
-SELECT A.ShowTime, M.[Name] AS MovieName, A.TicketSales, CAST(SUM(R.Rating) AS DECIMAL(16,2)) / COUNT(*) OVER (PARTITION BY M.MovieID) AS AverageReview
+SELECT A.ShowTime, M.[Name] AS MovieName, A.TicketSales, IIF(COUNT(R.ReviewID) IS NOT NULL, CAST(SUM(R.Rating) AS DECIMAL(16,2))/COUNT(R.ReviewID), 0) AS AverageReview
 FROM Aggregates A
 	INNER JOIN Movie.Movie M ON M.MovieID = A.MovieID
 	INNER JOIN Movie.Review R ON R.MovieID = M.MovieID

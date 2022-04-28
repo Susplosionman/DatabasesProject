@@ -4,7 +4,7 @@ AS
 
 WITH Aggregates([Name], AvgRating) AS
 (
-	SELECT M.[Name], CAST(SUM(R.Rating) AS DECIMAL (4,2))/ COUNT(*) OVER (PARTITION BY M.MovieID) AS AvgRating
+	SELECT M.[Name], IIF(COUNT(R.ReviewID) IS NOT NULL, CAST(SUM(R.Rating) AS DECIMAL(16,2))/COUNT(R.ReviewID), 0) AS AvgRating
 	FROM Movie.Movie M
 		INNER JOIN Movie.Review R ON R.MovieID = M.MovieID
 	WHERE M.Genre = @Genre
