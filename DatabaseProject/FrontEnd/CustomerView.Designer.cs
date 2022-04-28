@@ -63,6 +63,7 @@
             this.uxListView.TabIndex = 2;
             this.uxListView.UseCompatibleStateImageBehavior = false;
             this.uxListView.View = System.Windows.Forms.View.Details;
+            this.uxListView.SelectedIndexChanged += new System.EventHandler(this.uxListView_SelectedIndexChanged);
             // 
             // uxMovieColumn
             // 

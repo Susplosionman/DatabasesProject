@@ -49,6 +49,11 @@
             // uxRatingUpDown
             // 
             this.uxRatingUpDown.Location = new System.Drawing.Point(75, 16);
+            this.uxRatingUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.uxRatingUpDown.Minimum = new decimal(new int[] {
             1,
             0,

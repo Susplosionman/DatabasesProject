@@ -31,6 +31,7 @@ namespace FrontEnd
 
             }
             uxShowingBox.DataSource = Showings;
+            uxBuyTicketButton.Enabled = false;
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)
@@ -48,6 +49,18 @@ namespace FrontEnd
         {
             Showing s = uxShowingBox.SelectedItem as Showing;
             smr.CreateShowingAttendance(CurUser.UserID, s.ShowingID);
+        }
+
+        private void uxShowingBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(uxShowingBox.SelectedIndex < 0 || uxShowingBox.SelectedIndex > Showings.Count-1)
+            {
+                uxBuyTicketButton.Enabled = true;
+            }
+            else
+            {
+                uxBuyTicketButton.Enabled = false;
+            }
         }
     }
 }

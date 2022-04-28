@@ -46,7 +46,15 @@ namespace FrontEnd
 
         private void uxEmployeeRegister_Click(object sender, EventArgs e)
         {
-            if (!UserDictionary.ContainsKey(uxUsernameTB.Text))
+            if (uxUsernameTB.Text.Equals("") || uxUsernameTB.Text.Contains(" "))
+            {
+                uxResponseLabel.Text = "Please enter a valid username";
+            }
+            else if (uxPasswordTB.Text.Equals("") || uxPasswordTB.Text.Contains(" "))
+            {
+                uxResponseLabel.Text = "Please enter a valid password";
+            }
+            else if (!UserDictionary.ContainsKey(uxUsernameTB.Text))
             {
                 if (EmployeeOrCustomer)
                 {

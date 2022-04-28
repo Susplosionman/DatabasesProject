@@ -51,6 +51,8 @@ namespace FrontEnd
                 
                 uxListView.Items.Add(item);
             }
+            uxBuyTicket.Enabled = false;
+            uxSeeMovieInfo.Enabled = false;
         }
 
         private void uxLogoutButton_Click(object sender, EventArgs e)
@@ -65,11 +67,11 @@ namespace FrontEnd
 
         private void uxSeeMovieInfo_Click(object sender, EventArgs e)
         {
+            Movie movieToUse = FindMovieUsingMovieName(uxListView.SelectedItems[0].Text);
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
 
-                Movie movieToUse = FindMovieUsingMovieName(uxListView.SelectedItems[0].Text);
                 MovieInfoControl movieInfoControl = new MovieInfoControl(movieToUse, CurUser);
 
                 ui.Controls.Add(movieInfoControl);
@@ -114,6 +116,20 @@ namespace FrontEnd
 
                 ui.Controls.Add(up);
                 ui.Size = new Size(up.Width + 50, up.Height + 50);
+            }
+        }
+
+        private void uxListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(uxListView.SelectedItems.Count > 0 && uxListView.SelectedItems.Count < 2)
+            {
+                uxBuyTicket.Enabled = true;
+                uxSeeMovieInfo.Enabled = true;
+            }
+            if(uxListView.SelectedItems.Count == 0)
+            {
+                uxBuyTicket.Enabled = false;
+                uxSeeMovieInfo.Enabled = false;
             }
         }
     }

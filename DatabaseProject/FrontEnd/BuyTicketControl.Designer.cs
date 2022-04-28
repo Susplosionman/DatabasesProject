@@ -41,6 +41,7 @@
             this.uxShowingBox.Name = "uxShowingBox";
             this.uxShowingBox.Size = new System.Drawing.Size(128, 186);
             this.uxShowingBox.TabIndex = 0;
+            this.uxShowingBox.SelectedIndexChanged += new System.EventHandler(this.uxShowingBox_SelectedIndexChanged);
             // 
             // uxShowingLabel
             // 
