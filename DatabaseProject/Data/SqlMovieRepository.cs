@@ -117,7 +117,7 @@ namespace Data
             executor.ExecuteNonQuery(new DeleteShowingDataDelegate(id));
 
         }
-        public Dictionary<string,List<string>> GetAllMoviesGrossSales(int highest)
+        public List<List<string>> GetAllMoviesGrossSales(int highest)
         {
             return executor.ExecuteReader(new MovieTotalGrossDataDelegate(highest));
 

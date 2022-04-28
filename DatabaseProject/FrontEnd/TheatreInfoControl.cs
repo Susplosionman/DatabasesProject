@@ -28,8 +28,8 @@ namespace FrontEnd
             uxDataView.Columns.Clear();
             uxDataView.DataSource = null;
             uxDataView.Rows.Clear();
-            
-            Dictionary<string, List<string>> grossDic = new Dictionary<string, List<string>>();
+
+            List<List<string>> grossDic = new List<List<string>>();
             SelectHighest sh = new SelectHighest();
             sh.ShowDialog();
             if (sh.DialogResult == DialogResult.OK)
@@ -42,9 +42,9 @@ namespace FrontEnd
                 uxDataView.Columns.Add("Values", "Director Name");
                 uxDataView.Columns.Add("Values", "Gross Sales");
                 uxDataView.Columns.Add("Values", "Movies Sales Rank");
-                foreach (KeyValuePair<string, List<string>> item in grossDic)
+                foreach (List<string> item in grossDic)
                 {
-                    uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1], item.Value[2], item.Value[3], item.Value[4]);
+                    uxDataView.Rows.Add(item[0], item[1], item[2], item[3], item[4], item[5]);
                 }
             }
             

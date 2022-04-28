@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Data.DataDelegates
 {
-    internal class MovieTotalGrossDataDelegate : DataReaderDelegate<Dictionary<string,List<string>>>
+    internal class MovieTotalGrossDataDelegate : DataReaderDelegate<List<List<string>>>
     {
         public int Highest { get; set; }
         public MovieTotalGrossDataDelegate(int highest)
@@ -24,9 +24,9 @@ namespace Data.DataDelegates
 
         }
 
-        public override Dictionary<string, List<string>> Translate(SqlCommand command, IDataRowReader reader)
+        public override List<List<string>> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var salesDict = new Dictionary<string, List<string>>();
+            var salesDict = new List<List<string>>();
 
             while (reader.Read())
             {
@@ -37,8 +37,8 @@ namespace Data.DataDelegates
                 s.Append(time.Month.ToString() + "/" + time.Day.ToString() + "/" + time.Year.ToString());
                 
                 salesDict.Add(
-                   reader.GetString("Name"),
-                   new List<string> {reader.GetString("Genre"), s.ToString(), reader.GetString("Name"), "$" + reader.GetInt32("GrossSales").ToString(), reader.GetInt64("MovieRank").ToString()});
+                   
+                   new List<string> {reader.GetString("Name"), reader.GetString("Genre"), s.ToString(), reader.GetString("Name"), "$" + reader.GetInt32("GrossSales").ToString(), reader.GetInt64("MovieRank").ToString()});
             }
 
             return salesDict;
