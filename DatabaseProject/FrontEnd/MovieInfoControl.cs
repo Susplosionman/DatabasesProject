@@ -34,7 +34,7 @@ namespace FrontEnd
             //uxActorsLabel1.Text = actors[0];
             //uxActorsLabel2.Text = actors[1];
             //uxActorsLabel3.Text = actors[2];
-            //uxRatingLabel.Text = smr.GetAvgReviewForMovie(CurMovie.MovieID);
+            uxRatingLabel.Text = String.Format("{0:0.00}", smr.GetAvgReviewsForMovie(CurMovie.MovieID).Rating);
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)

@@ -30,7 +30,17 @@
       "ProjectGuid": "4dba8268-206a-46a0-992a-d81816d12a6d",
       "DisplayName": "DataAccess",
       "ColorIndex": 4
+    },
+    "a2fcc8bd-af75-44b8-ae17-5b5f5075c510": {
+      "ProjectGuid": "a2fcc8bd-af75-44b8-ae17-5b5f5075c510",
+      "DisplayName": "FrontEnd",
+      "ColorIndex": 5
+    },
+    "ab6c4af9-4e2c-415e-b5c9-516fc63915e0": {
+      "ProjectGuid": "ab6c4af9-4e2c-415e-b5c9-516fc63915e0",
+      "DisplayName": "Scripts",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 5
+  "NextColorIndex": 7
 }
