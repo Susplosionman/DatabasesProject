@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dakly\\.nuget\\packages\\": {}
+    "C:\\Users\\Teegan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\Data\\Data.csproj",
+      "projectUniqueName": "E:\\Coding Projects\\DatabaseProject\\DatabaseProject\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\Data\\Data.csproj",
-      "packagesPath": "C:\\Users\\dakly\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\Data\\obj\\",
+      "projectPath": "E:\\Coding Projects\\DatabaseProject\\DatabaseProject\\Data\\Data.csproj",
+      "packagesPath": "C:\\Users\\Teegan\\.nuget\\packages\\",
+      "outputPath": "E:\\Coding Projects\\DatabaseProject\\DatabaseProject\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\dakly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Teegan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net461": {
           "targetAlias": "net461",
           "projectReferences": {
-            "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\dakly\\Source\\Repos\\DatabasesProject\\DatabaseProject\\DataAccess\\DataAccess.csproj"
+            "E:\\Coding Projects\\DatabaseProject\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "E:\\Coding Projects\\DatabaseProject\\DatabaseProject\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -68,7 +68,7 @@
     "frameworks": {
       "net461": {
         "targetAlias": "net461",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
