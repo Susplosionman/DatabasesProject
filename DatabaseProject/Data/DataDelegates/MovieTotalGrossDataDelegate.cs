@@ -9,20 +9,20 @@ namespace Data.DataDelegates
 {
     internal class MovieTotalGrossDataDelegate : DataReaderDelegate<Dictionary<string,List<string>>>
     {
-      
-        public MovieTotalGrossDataDelegate()
+        public int Highest { get; set; }
+        public MovieTotalGrossDataDelegate(int highest)
            : base("Movie.MovieTotalGross")
         {
-           
+           Highest = highest;
         }
-        /*
+        
         public override void PrepareCommand(SqlCommand command)
         {
             base.PrepareCommand(command);
 
-            command.Parameters.AddWithValue("UserID", UserID);
+            command.Parameters.AddWithValue("HighestRank", Highest);
 
-        }*/
+        }
 
         public override Dictionary<string, List<string>> Translate(SqlCommand command, IDataRowReader reader)
         {
@@ -38,7 +38,7 @@ namespace Data.DataDelegates
                 
                 salesDict.Add(
                    reader.GetString("Name"),
-                   new List<string> {reader.GetString("Genre"), s.ToString(), reader.GetString("Name"), "$" + reader.GetInt32("GrossSales").ToString() });
+                   new List<string> {reader.GetString("Genre"), s.ToString(), reader.GetString("Name"), "$" + reader.GetInt32("GrossSales").ToString(), reader.GetInt64("MovieRank").ToString()});
             }
 
             return salesDict;

@@ -117,9 +117,9 @@ namespace Data
             executor.ExecuteNonQuery(new DeleteShowingDataDelegate(id));
 
         }
-        public Dictionary<string,List<string>> GetAllMoviesGrossSales()
+        public Dictionary<string,List<string>> GetAllMoviesGrossSales(int highest)
         {
-            return executor.ExecuteReader(new MovieTotalGrossDataDelegate());
+            return executor.ExecuteReader(new MovieTotalGrossDataDelegate(highest));
 
         }
         public Dictionary<string, List<string>> RetrieveShowingStats(DateTimeOffset from, DateTimeOffset to)

@@ -174,3 +174,4 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv8\DatabaseProject\FrontEnd\obj\Deb
 C:\Users\Connor\Source\Repos\DatabasesProjectv8\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
 C:\Users\Connor\Source\Repos\DatabasesProjectv8\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.TheatreInfoControl.resources
 C:\Users\Connor\Source\Repos\DatabasesProjectv8\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.GetTimeframe.resources
+C:\Users\Connor\Source\Repos\DatabasesProjectv8\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.SelectHighest.resources

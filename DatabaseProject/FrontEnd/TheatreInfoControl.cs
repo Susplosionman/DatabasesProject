@@ -30,19 +30,24 @@ namespace FrontEnd
             uxDataView.Rows.Clear();
             
             Dictionary<string, List<string>> grossDic = new Dictionary<string, List<string>>();
-            grossDic = smr.GetAllMoviesGrossSales();
-
-            uxDataView.Columns.Add("Key", "Movie Name");
-            uxDataView.Columns.Add("Values", "Genre");
-            uxDataView.Columns.Add("Values", "Release Date");
-            uxDataView.Columns.Add("Values", "Director Name");
-            uxDataView.Columns.Add("Values", "Gross Sales");
-            foreach (KeyValuePair<string, List<string>> item in grossDic)
+            SelectHighest sh = new SelectHighest();
+            sh.ShowDialog();
+            if (sh.DialogResult == DialogResult.OK)
             {
-               
+                grossDic = smr.GetAllMoviesGrossSales(sh.Top); // fix this with a dialog
 
-                uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1], item.Value[2], item.Value[3]);
+                uxDataView.Columns.Add("Key", "Movie Name");
+                uxDataView.Columns.Add("Values", "Genre");
+                uxDataView.Columns.Add("Values", "Release Date");
+                uxDataView.Columns.Add("Values", "Director Name");
+                uxDataView.Columns.Add("Values", "Gross Sales");
+                uxDataView.Columns.Add("Values", "Movies Sales Rank");
+                foreach (KeyValuePair<string, List<string>> item in grossDic)
+                {
+                    uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1], item.Value[2], item.Value[3], item.Value[4]);
+                }
             }
+            
             
         }
 

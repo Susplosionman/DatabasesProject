@@ -12,7 +12,7 @@ namespace DataAccess
         T GetValue<T>(string name);
         T GetValue<T>(string name, T defaultValue);
         bool IsDBNull(string name);
-
+        long GetInt64(string name);
         decimal GetDecimal(string name);
     }
 }
