@@ -30,14 +30,13 @@
         {
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.uxSubmitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(115, 7);
+            this.numericUpDown1.Location = new System.Drawing.Point(125, 7);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -67,15 +66,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "I want to see the top ";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(167, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "movies in sales";
-            // 
             // uxSubmitButton
             // 
             this.uxSubmitButton.Location = new System.Drawing.Point(179, 37);
@@ -92,7 +82,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 72);
             this.Controls.Add(this.uxSubmitButton);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericUpDown1);
             this.Name = "SelectHighest";
@@ -107,7 +96,6 @@
 
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button uxSubmitButton;
     }
 }

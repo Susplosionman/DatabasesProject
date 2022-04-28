@@ -127,7 +127,24 @@ namespace Data
             return executor.ExecuteReader(new RetrieveRecentShowingStatsDataDelegate(from,to));
 
         }
+        public Dictionary<string, List<string>> RetrieveGenreReviewRankings(string genre)
+        {
+            return executor.ExecuteReader(new RetrieveGenreReviewRankingsDataDelegate(genre));
 
+        }
+        public IReadOnlyList<string> GetDistinctGenres()
+        {
+            return executor.ExecuteReader(new GetDistinctGenresDataDelegate());
+        }
+        public Dictionary<string, List<string>> RetrieveUserStatistics(int highest)
+        {
+            return executor.ExecuteReader(new RetrieveUserStatisticsDataDelegate(highest));
+
+        }
+        public void UpdateShowing(int sID, DateTimeOffset dto, int price, int mID)
+        {
+            executor.ExecuteNonQuery(new UpdateShowingDataDelegate(sID, dto, price, mID));
+        }
 
     }
 }

@@ -32,6 +32,8 @@
             this.uxGetMovieGrossSales = new System.Windows.Forms.Button();
             this.uxGetShowingStats = new System.Windows.Forms.Button();
             this.uxBackButton = new System.Windows.Forms.Button();
+            this.uxGetStatsForGenreButton = new System.Windows.Forms.Button();
+            this.uxGetUserStatisticsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uxDataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,10 +75,32 @@
             this.uxBackButton.UseVisualStyleBackColor = true;
             this.uxBackButton.Click += new System.EventHandler(this.uxBackButton_Click);
             // 
+            // uxGetStatsForGenreButton
+            // 
+            this.uxGetStatsForGenreButton.Location = new System.Drawing.Point(216, 245);
+            this.uxGetStatsForGenreButton.Name = "uxGetStatsForGenreButton";
+            this.uxGetStatsForGenreButton.Size = new System.Drawing.Size(86, 49);
+            this.uxGetStatsForGenreButton.TabIndex = 4;
+            this.uxGetStatsForGenreButton.Text = "Stats For Movies in a Genre";
+            this.uxGetStatsForGenreButton.UseVisualStyleBackColor = true;
+            this.uxGetStatsForGenreButton.Click += new System.EventHandler(this.uxGetStatsForGenreButton_Click);
+            // 
+            // uxGetUserStatisticsButton
+            // 
+            this.uxGetUserStatisticsButton.Location = new System.Drawing.Point(309, 246);
+            this.uxGetUserStatisticsButton.Name = "uxGetUserStatisticsButton";
+            this.uxGetUserStatisticsButton.Size = new System.Drawing.Size(95, 48);
+            this.uxGetUserStatisticsButton.TabIndex = 5;
+            this.uxGetUserStatisticsButton.Text = "User Statistics";
+            this.uxGetUserStatisticsButton.UseVisualStyleBackColor = true;
+            this.uxGetUserStatisticsButton.Click += new System.EventHandler(this.uxGetUserStatisticsButton_Click);
+            // 
             // TheatreInfoControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxGetUserStatisticsButton);
+            this.Controls.Add(this.uxGetStatsForGenreButton);
             this.Controls.Add(this.uxBackButton);
             this.Controls.Add(this.uxGetShowingStats);
             this.Controls.Add(this.uxGetMovieGrossSales);
@@ -94,5 +118,7 @@
         private System.Windows.Forms.Button uxGetMovieGrossSales;
         private System.Windows.Forms.Button uxGetShowingStats;
         private System.Windows.Forms.Button uxBackButton;
+        private System.Windows.Forms.Button uxGetStatsForGenreButton;
+        private System.Windows.Forms.Button uxGetUserStatisticsButton;
     }
 }

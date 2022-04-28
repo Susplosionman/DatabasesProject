@@ -32,6 +32,10 @@ namespace FrontEnd
             }
             uxShowingBox.DataSource = Showings;
             uxBuyTicketButton.Enabled = false;
+            if (Showings.Count > 0)
+            {
+                uxBuyTicketButton.Enabled = true;
+            }
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)
@@ -55,11 +59,11 @@ namespace FrontEnd
         {
             if(uxShowingBox.SelectedIndex < 0 || uxShowingBox.SelectedIndex > Showings.Count-1)
             {
-                uxBuyTicketButton.Enabled = true;
+                uxBuyTicketButton.Enabled = false;
             }
             else
             {
-                uxBuyTicketButton.Enabled = false;
+                uxBuyTicketButton.Enabled = true;
             }
         }
     }

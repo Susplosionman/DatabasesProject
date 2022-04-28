@@ -49,8 +49,8 @@ namespace FrontEnd
             }
             else
             {
-                smr.DeleteShowing(CurShowing.ShowingID);
-                CurShowing = smr.CreateShowing(uxDatePicker.Value, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
+                //smr.DeleteShowing(CurShowing.ShowingID);
+                smr.UpdateShowing(CurShowing.ShowingID, uxDatePicker.Value, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
             }
             
             ModifySelectedMovie msm = new ModifySelectedMovie(CurMovie, CurUser);

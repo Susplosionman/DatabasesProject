@@ -68,6 +68,10 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\P
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.GetAvgReviewForMovie.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.MovieTotalGross.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveRecentShowingStats.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.GenreReviewRankings.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.GetDistinctGenres.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.RetrieveUserActivity.sql"
+Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Procedures\Movie.UpdateShowing.sql"
 #Data doesnt need to be persistent between rebuilds
 Write-Host "Inserting data..."
 #Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Data\Person.AddressType.sql"

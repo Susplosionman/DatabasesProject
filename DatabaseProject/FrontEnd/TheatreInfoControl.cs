@@ -34,7 +34,7 @@ namespace FrontEnd
             sh.ShowDialog();
             if (sh.DialogResult == DialogResult.OK)
             {
-                grossDic = smr.GetAllMoviesGrossSales(sh.Top); // fix this with a dialog
+                grossDic = smr.GetAllMoviesGrossSales(sh.Top + 1);
 
                 uxDataView.Columns.Add("Key", "Movie Name");
                 uxDataView.Columns.Add("Values", "Genre");
@@ -86,6 +86,55 @@ namespace FrontEnd
                 EmployeeView ev = new EmployeeView(CurUser);
                 ui.Controls.Add(ev);
                 ui.Size = new Size(ev.Width + 50, ev.Height + 50);
+            }
+        }
+
+        private void uxGetStatsForGenreButton_Click(object sender, EventArgs e)
+        {
+            uxDataView.Columns.Clear();
+            uxDataView.DataSource = null;
+            uxDataView.Rows.Clear();
+
+            uxDataView.Columns.Add("ShowTime", "Movie Name");
+            uxDataView.Columns.Add("MovieName", "Average Rating");
+            uxDataView.Columns.Add("Showing Sales", "Rank");
+
+            GetGenre gg = new GetGenre();
+
+            if (gg.ShowDialog() == DialogResult.OK)
+            {
+                Dictionary<string, List<string>> statdic = smr.RetrieveGenreReviewRankings(gg.Genre);
+
+                foreach (KeyValuePair<string, List<string>> item in statdic)
+                {
+                    uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1]);
+                }
+                //uxDataView.DataSource = statdic;
+            }
+        }
+
+        private void uxGetUserStatisticsButton_Click(object sender, EventArgs e)
+        {
+            uxDataView.Columns.Clear();
+            uxDataView.DataSource = null;
+            uxDataView.Rows.Clear();
+
+            uxDataView.Columns.Add("ShowTime", "Username");
+            uxDataView.Columns.Add("MovieName", "# Movies Attended");
+            uxDataView.Columns.Add("Showing Sales", "# Reviews Written");
+            uxDataView.Columns.Add("Average Review", "Activity Rank");
+            
+            SelectHighest sh = new SelectHighest();
+            sh.ShowDialog();
+            if (sh.DialogResult == DialogResult.OK)
+            {
+                Dictionary<string, List<string>> statdic = smr.RetrieveUserStatistics(sh.Top + 1);
+
+                foreach (KeyValuePair<string, List<string>> item in statdic)
+                {
+                    uxDataView.Rows.Add(item.Key, item.Value[0], item.Value[1], item.Value[2]);
+                }
+                //uxDataView.DataSource = statdic;
             }
         }
     }
