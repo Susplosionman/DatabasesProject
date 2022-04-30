@@ -28,5 +28,11 @@ namespace FrontEnd
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void uxSelectAllButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult= DialogResult.OK;
+            Top = 10000;
+        }
     }
 }
