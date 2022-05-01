@@ -293,3 +293,32 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\FrontEnd\obj\De
 C:\Users\Connor\source\repos\DatabasesProjectv11\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.CopyComplete
 C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
 C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\FrontEnd.exe.config
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\FrontEnd.exe
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\FrontEnd.pdb
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\Data.dll
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\DataAccess.dll
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\Data.pdb
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\bin\Debug\DataAccess.pdb
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csprojAssemblyReference.cache
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.AddMovieControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.AddOrEditShowing.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.BuyTicketControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.CustomerView.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.EmployeeView.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.GetGenre.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.GetTimeframe.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.LeaveReviewControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.LoginControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.ModifySelectedMovie.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.MovieInfoControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.Properties.Resources.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.RegisterUserControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.SelectHighest.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.TheatreInfoControl.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.UserProfile.resources
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.GenerateResource.cache
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.CoreCompileInputs.cache
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.csproj.CopyComplete
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.exe
+E:\Coding Projects\Database Project\DatabaseProject\FrontEnd\obj\Debug\FrontEnd.pdb

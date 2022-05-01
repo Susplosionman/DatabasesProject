@@ -7,6 +7,7 @@ WITH MoviesAttended(UserID, Username, MoviesAttended) AS
 	SELECT U.UserID, U.Username, IIF(COUNT(DISTINCT SA.ShowingID) IS NOT NULL, COUNT(DISTINCT SA.ShowingID), 0) AS MoviesAttended
 	FROM Movie.[User] U
 		LEFT JOIN Movie.ShowingAttendance SA ON SA.UserID = U.UserID
+	WHERE U.[Type] = N'Customer'
 	GROUP BY U.UserID, U.Username
 )
 

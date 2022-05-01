@@ -152,3 +152,14 @@ C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\Data\obj\Debug\
 C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CopyComplete
 C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\Data\obj\Debug\net461\Data.dll
 C:\Users\Connor\Source\Repos\DatabasesProjectv11\DatabaseProject\Data\obj\Debug\net461\Data.pdb
+E:\Coding Projects\Database Project\DatabaseProject\Data\bin\Debug\net461\Data.dll
+E:\Coding Projects\Database Project\DatabaseProject\Data\bin\Debug\net461\Data.pdb
+E:\Coding Projects\Database Project\DatabaseProject\Data\bin\Debug\net461\DataAccess.dll
+E:\Coding Projects\Database Project\DatabaseProject\Data\bin\Debug\net461\DataAccess.pdb
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.csprojAssemblyReference.cache
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfoInputs.cache
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfo.cs
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CoreCompileInputs.cache
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CopyComplete
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.dll
+E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.pdb
