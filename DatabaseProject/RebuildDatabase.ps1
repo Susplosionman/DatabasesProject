@@ -38,9 +38,7 @@ Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\S
 
 Write-Host "Creating tables..."
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Director.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Actor.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Movie.sql"
-Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.ActorMovies.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.User.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Showing.sql"
 Invoke-SqlCmd -ServerInstance $Server -Database $Database -InputFile "Data\Sql\Tables\Movie.Review.sql"
