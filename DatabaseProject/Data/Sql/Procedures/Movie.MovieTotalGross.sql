@@ -10,7 +10,7 @@ WITH Aggregates(ShowingID, MovieID, GrossSales) AS
 	GROUP BY S.ShowingID, S.MovieID, S.TicketPrice
 )
 
-SELECT M.[Name], M.Genre, M.ReleaseDate, D.[Name], SUM(A.GrossSales) AS GrossSales, RANK() OVER (ORDER BY SUM(A.GrossSales) DESC) AS MovieRank
+SELECT M.[Name], M.Genre, M.ReleaseDate, D.[Name] AS DirectorName, SUM(A.GrossSales) AS GrossSales, RANK() OVER (ORDER BY SUM(A.GrossSales) DESC) AS MovieRank
 FROM Movie.Movie M
 	INNER JOIN Movie.Director D ON D.DirectorID = M.DirectorID
 	INNER JOIN Aggregates A ON A.MovieID = M.MovieID

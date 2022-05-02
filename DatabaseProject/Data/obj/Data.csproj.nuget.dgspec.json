@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\Data\\Data.csproj": {}
+    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Connor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,14 +47,14 @@
         }
       }
     },
-    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\Data\\Data.csproj": {
+    "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Connor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\Data\\obj\\",
+        "outputPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,8 +75,8 @@
           "net461": {
             "targetAlias": "net461",
             "projectReferences": {
-              "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv12\\DatabaseProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Connor\\Source\\Repos\\DatabasesProjectv13\\DatabaseProject\\DataAccess\\DataAccess.csproj"
               }
             }
           }

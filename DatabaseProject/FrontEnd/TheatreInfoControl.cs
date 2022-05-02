@@ -34,7 +34,7 @@ namespace FrontEnd
             sh.ShowDialog();
             if (sh.DialogResult == DialogResult.OK)
             {
-                grossDic = smr.GetAllMoviesGrossSales(sh.Top + 1);
+                grossDic = smr.GetAllMoviesGrossSales(sh.Top);
 
                 uxDataView.Columns.Add("Key", "Movie Name");
                 uxDataView.Columns.Add("Values", "Genre");
