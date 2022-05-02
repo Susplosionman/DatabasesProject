@@ -25,7 +25,15 @@ namespace FrontEnd
             Director d = smr.FetchDirectorByID(movie.DirectorID);
             
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(CurMovie.MovieID);
-            uxShowingBox.DataSource = showings;
+            List<Showing> futureShowings = new List<Showing>();
+            for (int i = 0; i < showings.Count; i++)
+            {
+                if (showings[i].ShowTime >= DateTimeOffset.Now)
+                {
+                    futureShowings.Add(showings[i]);
+                }
+            }
+            uxShowingBox.DataSource = futureShowings;
 
             uxMovieLabel.Text = CurMovie.Name;
             uxDirectorLabel.Text = d.Name;

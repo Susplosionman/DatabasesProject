@@ -17,20 +17,37 @@ namespace FrontEnd
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
         User CurUser { get; set; }
         List<Movie> MoviesAttended { get; set; } = new List<Movie>();
-        List<Review> Reviews { get; set; } = new List<Review>();
+        List<List<string>> Reviews { get; set; } = new List<List<string>>();
         public UserProfile(User user)
         {
             CurUser = user;
             InitializeComponent();
             uxUsernameLabel.Text = user.Username +"'s Profile";
             MoviesAttended = (List<Movie>)smr.RetrieveMoviesForUser(CurUser.UserID);
-            Reviews = (List<Review>)smr.RetrieveReviewsForUser(CurUser.UserID);
+            Reviews = smr.RetrieveReviewsForUser(CurUser.UserID);
 
         }
 
         private void uxViewReviewsButton_Click(object sender, EventArgs e)
         {
-            uxDataGrid.DataSource = Reviews;
+            uxDataGrid.Columns.Clear();
+            uxDataGrid.DataSource = null;
+            uxDataGrid.Rows.Clear();
+
+            Reviews = smr.RetrieveReviewsForUser(CurUser.UserID);
+            uxDataGrid.Columns.Add("Key", "Movie Name");
+            uxDataGrid.Columns.Add("Values", "Director Name");
+            uxDataGrid.Columns.Add("Values", "Rating");
+            uxDataGrid.Columns.Add("Values", "Comment");
+
+            foreach (List<string> item in Reviews)
+            {
+                uxDataGrid.Rows.Add(item[0], item[1], item[2], item[3]);
+            }
+            uxDataGrid.Refresh();
+                
+
+            
         }
 
         private void uxViewMoviesAttendedButton_Click(object sender, EventArgs e)
@@ -50,15 +67,34 @@ namespace FrontEnd
 
         private void uxDeleteReview_Click(object sender, EventArgs e)
         {
+            
+
             if (uxDataGrid.SelectedRows.Count > 0)
             {
-                if (uxDataGrid.CurrentRow.DataBoundItem is Review r) 
+                int selectedRowIndex = uxDataGrid.CurrentRow.Index;
+                if (selectedRowIndex < Reviews.Count)
                 {
-                    smr.DeleteReview(r.ReviewID);
-                    Reviews = (List<Review>)smr.RetrieveReviewsForUser(CurUser.UserID);
-                    uxDataGrid.DataSource = Reviews;
+                    smr.DeleteReview(Convert.ToInt32(Reviews[selectedRowIndex][4]));
+                    Reviews = smr.RetrieveReviewsForUser(CurUser.UserID);
+
+                    uxDataGrid.Columns.Clear();
+                    uxDataGrid.DataSource = null;
+                    uxDataGrid.Rows.Clear();
+
+                    uxDataGrid.Columns.Add("Key", "Movie Name");
+                    uxDataGrid.Columns.Add("Values", "Director Name");
+                    uxDataGrid.Columns.Add("Values", "Rating");
+                    uxDataGrid.Columns.Add("Values", "Comment");
+
+                    foreach (List<string> item in Reviews)
+                    {
+                        uxDataGrid.Rows.Add(item[0], item[1], item[2], item[3]);
+                    }
                     uxDataGrid.Refresh();
                 }
+                
+                    
+                
                 
             }
         }

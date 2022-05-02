@@ -32,12 +32,22 @@ namespace FrontEnd
             {
                 ListViewItem item = new ListViewItem(Movies[i].ToString());
                 List<Showing> showingsForMovieI = (List<Showing>)smr.RetrieveShowingsForMovie(Movies[i].MovieID);
-                // List<Review> list = RetrieveReviewsForMovie(Movies[i].MovieID);
-                // if (list.Count > 0) { do stuff } else {dont do stuff}
+                
                 Review r = smr.GetAvgReviewsForMovie(Movies[i].MovieID);
-                //item.SubItems.Add(r.Rating.ToString());
+                
                 item.SubItems.Add(String.Format("{0:0.00}", r.Rating));
-                if (showingsForMovieI.Count > 0)
+
+
+                List<Showing> futureShowings = new List<Showing>();
+                for (int j = 0; j < showingsForMovieI.Count; j++)
+                {
+                    if (showingsForMovieI[j].ShowTime >= DateTimeOffset.Now)
+                    {
+                        futureShowings.Add(showingsForMovieI[j]);
+                    }
+                }
+
+                if (futureShowings.Count > 0)
                 {
                     item.SubItems.Add("Yes");
                 }

@@ -113,3 +113,12 @@ E:\Coding Projects\Database Project\DatabaseProject\DataAccess\obj\Debug\net461\
 E:\Coding Projects\Database Project\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.CoreCompileInputs.cache
 E:\Coding Projects\Database Project\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.dll
 E:\Coding Projects\Database Project\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\bin\Debug\net461\DataAccess.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\bin\Debug\net461\DataAccess.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.AssemblyInfo.cs
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\DataAccess\obj\Debug\net461\DataAccess.pdb

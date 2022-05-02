@@ -126,11 +126,11 @@
             // uxShowingsLabel
             // 
             this.uxShowingsLabel.AutoSize = true;
-            this.uxShowingsLabel.Location = new System.Drawing.Point(276, 20);
+            this.uxShowingsLabel.Location = new System.Drawing.Point(262, 20);
             this.uxShowingsLabel.Name = "uxShowingsLabel";
-            this.uxShowingsLabel.Size = new System.Drawing.Size(53, 13);
+            this.uxShowingsLabel.Size = new System.Drawing.Size(90, 13);
             this.uxShowingsLabel.TabIndex = 14;
-            this.uxShowingsLabel.Text = "Showings";
+            this.uxShowingsLabel.Text = "Current Showings";
             // 
             // uxBuyTicketButton
             // 

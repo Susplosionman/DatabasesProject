@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Data.DataDelegates
 {
-    internal class RetrieveReviewsForUserDataDelegate : DataReaderDelegate<IReadOnlyList<Review>>
+    internal class RetrieveReviewsForUserDataDelegate : DataReaderDelegate<List<List<string>>>
     {
         public int UserID { get; set; }
         public RetrieveReviewsForUserDataDelegate(int id)
@@ -22,18 +22,15 @@ namespace Data.DataDelegates
 
         }
 
-        public override IReadOnlyList<Review> Translate(SqlCommand command, IDataRowReader reader)
+        public override List<List<string>> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var reviews = new List<Review>();
+            var reviews = new List<List<string>>();
 
+
+            
             while (reader.Read())
             {
-                reviews.Add(new Review(
-                   reader.GetInt32("ReviewID"),
-                   UserID,
-                   reader.GetInt32("Rating"),
-                   reader.GetString("Comment"),
-                   reader.GetInt32("MovieID")));
+                reviews.Add(new List<string> { reader.GetString("MovieName"), reader.GetString("DirectorName"), reader.GetInt32("Rating").ToString(), reader.GetString("Comment"), reader.GetInt32("ReviewID").ToString() });
             }
 
             return reviews;

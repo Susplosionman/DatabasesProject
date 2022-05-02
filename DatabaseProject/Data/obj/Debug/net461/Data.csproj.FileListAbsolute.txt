@@ -163,3 +163,15 @@ E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.c
 E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CopyComplete
 E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.dll
 E:\Coding Projects\Database Project\DatabaseProject\Data\obj\Debug\net461\Data.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\bin\Debug\net461\Data.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\bin\Debug\net461\Data.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\bin\Debug\net461\DataAccess.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\bin\Debug\net461\DataAccess.pdb
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.csproj.AssemblyReference.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfoInputs.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.AssemblyInfo.cs
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CoreCompileInputs.cache
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.csproj.CopyComplete
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.dll
+C:\Users\Connor\Source\Repos\DatabasesProjectv12\DatabaseProject\Data\obj\Debug\net461\Data.pdb
