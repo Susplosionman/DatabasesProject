@@ -37,6 +37,7 @@
             this.uxTicketPricePicker = new System.Windows.Forms.NumericUpDown();
             this.uxSetShowtime = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.uxTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.uxTicketPricePicker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,10 +121,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // uxTimePicker
+            // 
+            this.uxTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.uxTimePicker.Location = new System.Drawing.Point(301, 79);
+            this.uxTimePicker.Name = "uxTimePicker";
+            this.uxTimePicker.ShowUpDown = true;
+            this.uxTimePicker.Size = new System.Drawing.Size(88, 20);
+            this.uxTimePicker.TabIndex = 9;
+            // 
             // AddOrEditShowing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxTimePicker);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.uxSetShowtime);
             this.Controls.Add(this.uxTicketPricePicker);
@@ -152,5 +163,6 @@
         private System.Windows.Forms.NumericUpDown uxTicketPricePicker;
         private System.Windows.Forms.Button uxSetShowtime;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker uxTimePicker;
     }
 }

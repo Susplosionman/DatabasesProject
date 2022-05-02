@@ -37,12 +37,13 @@
             this.uxBuyTicket = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
             this.uxUserProfileButton = new System.Windows.Forms.Button();
+            this.uxCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Location = new System.Drawing.Point(2, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 1;
@@ -56,10 +57,10 @@
             this.uxIsShowing});
             this.uxListView.GridLines = true;
             this.uxListView.HideSelection = false;
-            this.uxListView.Location = new System.Drawing.Point(5, 23);
+            this.uxListView.Location = new System.Drawing.Point(5, 33);
             this.uxListView.Margin = new System.Windows.Forms.Padding(1);
             this.uxListView.Name = "uxListView";
-            this.uxListView.Size = new System.Drawing.Size(482, 225);
+            this.uxListView.Size = new System.Drawing.Size(482, 215);
             this.uxListView.TabIndex = 2;
             this.uxListView.UseCompatibleStateImageBehavior = false;
             this.uxListView.View = System.Windows.Forms.View.Details;
@@ -124,10 +125,22 @@
             this.uxUserProfileButton.UseVisualStyleBackColor = true;
             this.uxUserProfileButton.Click += new System.EventHandler(this.uxUserProfileButton_Click);
             // 
+            // uxCheckBox
+            // 
+            this.uxCheckBox.AutoSize = true;
+            this.uxCheckBox.Location = new System.Drawing.Point(279, 10);
+            this.uxCheckBox.Name = "uxCheckBox";
+            this.uxCheckBox.Size = new System.Drawing.Size(208, 17);
+            this.uxCheckBox.TabIndex = 8;
+            this.uxCheckBox.Text = "Show Only Movies Currently Showing?";
+            this.uxCheckBox.UseVisualStyleBackColor = true;
+            this.uxCheckBox.CheckedChanged += new System.EventHandler(this.uxCheckBox_CheckedChanged);
+            // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uxCheckBox);
             this.Controls.Add(this.uxUserProfileButton);
             this.Controls.Add(this.uxLogoutButton);
             this.Controls.Add(this.uxBuyTicket);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Button uxLogoutButton;
         private System.Windows.Forms.ColumnHeader uxIsShowing;
         private System.Windows.Forms.Button uxUserProfileButton;
+        private System.Windows.Forms.CheckBox uxCheckBox;
     }
 }

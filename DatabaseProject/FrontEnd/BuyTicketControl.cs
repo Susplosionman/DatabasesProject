@@ -25,11 +25,18 @@ namespace FrontEnd
             CurMovie = m;
 
             List<Showing> showings = (List<Showing>)smr.RetrieveShowingsForMovie(CurMovie.MovieID);
-            for (int i = 0; i < showings.Count; i++)
+            
+            
+            for (int j = 0; j < showings.Count; j++)
             {
-                Showings.Add(showings[i]);
-
+                if (showings[j].ShowTime >= DateTimeOffset.Now)
+                {
+                    Showings.Add(showings[j]);
+                }
             }
+
+ 
+
             uxShowingBox.DataSource = Showings;
             uxBuyTicketButton.Enabled = false;
             if (Showings.Count > 0)

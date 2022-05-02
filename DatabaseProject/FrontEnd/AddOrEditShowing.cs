@@ -45,19 +45,19 @@ namespace FrontEnd
         {
             if (AddingOrEditing)
             {
-                CurShowing = smr.CreateShowing(uxDatePicker.Value, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
+                CurShowing = smr.CreateShowing(uxDatePicker.Value.Date + uxTimePicker.Value.TimeOfDay, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
             }
             else
             {
                 //smr.DeleteShowing(CurShowing.ShowingID);
-                smr.UpdateShowing(CurShowing.ShowingID, uxDatePicker.Value, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
+                smr.UpdateShowing(CurShowing.ShowingID, uxDatePicker.Value.Date + uxTimePicker.Value.TimeOfDay, (int)uxTicketPricePicker.Value, CurMovie.MovieID);
             }
             
             ModifySelectedMovie msm = new ModifySelectedMovie(CurMovie, CurUser);
             if (this.FindForm() is UserInterface ui)
             {
                 ui.Controls.Remove(this);
-                ui.Controls.Add(msm); // passing in true for adding, false for editing.
+                ui.Controls.Add(msm); 
                 msm.ShowingAdded = CurShowing;
                 ui.Size = new Size(ui._modifyMovieControl.Width + 50, ui._modifyMovieControl.Height + 50);
             }
@@ -69,7 +69,7 @@ namespace FrontEnd
             {
                 ModifySelectedMovie msm = new ModifySelectedMovie(CurMovie, CurUser);
                 ui.Controls.Remove(this);
-                ui.Controls.Add(msm); // passing in true for adding, false for editing.
+                ui.Controls.Add(msm); 
                 ui.Size = new Size(ui._modifyMovieControl.Width + 50, ui._modifyMovieControl.Height + 50);
             }
         }

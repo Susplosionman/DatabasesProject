@@ -18,6 +18,7 @@ namespace FrontEnd
 
         public BindingList<Movie> Movies { get; set; } = new BindingList<Movie>();
         public BindingList<Showing> Showings { get; set; } = new BindingList<Showing>();
+        public BindingList<Showing> FutureShowings { get; set; } = new BindingList<Showing>();
         User CurUser { get; set; }
         public CustomerView(User u)
         {
@@ -37,17 +38,16 @@ namespace FrontEnd
                 
                 item.SubItems.Add(String.Format("{0:0.00}", r.Rating));
 
-
-                List<Showing> futureShowings = new List<Showing>();
+                BindingList<Showing> future = new BindingList<Showing>();
                 for (int j = 0; j < showingsForMovieI.Count; j++)
                 {
                     if (showingsForMovieI[j].ShowTime >= DateTimeOffset.Now)
                     {
-                        futureShowings.Add(showingsForMovieI[j]);
+                        future.Add(showingsForMovieI[j]);
                     }
                 }
 
-                if (futureShowings.Count > 0)
+                if (future.Count > 0)
                 {
                     item.SubItems.Add("Yes");
                 }
@@ -140,6 +140,85 @@ namespace FrontEnd
             {
                 uxBuyTicket.Enabled = false;
                 uxSeeMovieInfo.Enabled = false;
+            }
+        }
+
+        private void uxCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            
+            FutureShowings = new BindingList<Showing>();
+            if (uxCheckBox.Checked)
+            {
+                uxListView.Items.Clear();
+                BindingList<Movie> movies = new BindingList<Movie>();
+                for (int i = 0; i < Movies.Count; i++)
+                {
+                    List<Showing> showingsForMovieI = (List<Showing>)smr.RetrieveShowingsForMovie(Movies[i].MovieID);
+                    BindingList<Showing> future = new BindingList<Showing>();
+                    for (int j = 0; j < showingsForMovieI.Count; j++)
+                    {
+
+                        if (showingsForMovieI[j].ShowTime >= DateTimeOffset.Now)
+                        {
+                            future.Add(showingsForMovieI[j]);
+                        }
+                    }
+
+                    if (future.Count > 0)
+                    {
+                        movies.Add(Movies[i]);
+                    }
+                }
+
+                for (int i = 0; i < movies.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(movies[i].ToString());
+
+                    Review r = smr.GetAvgReviewsForMovie(movies[i].MovieID);
+
+                    item.SubItems.Add(String.Format("{0:0.00}", r.Rating));
+                    item.SubItems.Add("Yes");
+                    uxListView.Items.Add(item);
+                }
+
+            }
+            else
+            {
+                //FutureShowings = new BindingList<Showing>();
+                uxListView.Items.Clear();
+                List<Movie> movies = (List<Movie>)smr.RetrieveMovies();
+                for (int i = 0; i < movies.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(Movies[i].ToString());
+                    List<Showing> showingsForMovieI = (List<Showing>)smr.RetrieveShowingsForMovie(Movies[i].MovieID);
+
+                    Review r = smr.GetAvgReviewsForMovie(Movies[i].MovieID);
+
+                    item.SubItems.Add(String.Format("{0:0.00}", r.Rating));
+
+                    BindingList<Showing> future = new BindingList<Showing>();
+                    for (int j = 0; j < showingsForMovieI.Count; j++)
+                    {
+                        if (showingsForMovieI[j].ShowTime >= DateTimeOffset.Now)
+                        {
+                            future.Add(showingsForMovieI[j]);
+                        }
+                    }
+
+                    if (future.Count > 0)
+                    {
+                        item.SubItems.Add("Yes");
+                    }
+                    else
+                    {
+                        item.SubItems.Add("No");
+                    }
+                    // int avgreview = smr.GetAvgReview
+                    //item.SubItems.Add(avgreview);
+                    //if (showings.Count > 0) { Is showing = yes } else { no }
+
+                    uxListView.Items.Add(item);
+                }
             }
         }
     }
