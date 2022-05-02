@@ -29,8 +29,11 @@ namespace FrontEnd
             
             for (int i = 0; i < showings.Count; i++)
             {
-                Showings.Add(showings[i]);
+                
+                    Showings.Add(showings[i]);
+               
             }
+
             uxShowingList.DataSource = Showings;
             uxShowingList.Update();
         }
