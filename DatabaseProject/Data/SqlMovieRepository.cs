@@ -94,7 +94,7 @@ namespace Data
         {
             return executor.ExecuteReader(new RetrieveShowingsForMovieDataDelegate(id));
         }
-        public IReadOnlyList<Movie> RetrieveMoviesForUser(int id)
+        public List<List<string>> RetrieveMoviesForUser(int id)
         {
             return executor.ExecuteReader(new RetrieveMoviesForUserDataDelegate(id));
         }

@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace Data.DataDelegates
 {
-    internal class RetrieveMoviesForUserDataDelegate : DataReaderDelegate<IReadOnlyList<Movie>>
+    internal class RetrieveMoviesForUserDataDelegate : DataReaderDelegate<List<List<string>>>
     {
         public int UserID { get; set; }
         public RetrieveMoviesForUserDataDelegate(int id)
@@ -22,18 +22,14 @@ namespace Data.DataDelegates
 
         }
 
-        public override IReadOnlyList<Movie> Translate(SqlCommand command, IDataRowReader reader)
+        public override List<List<string>> Translate(SqlCommand command, IDataRowReader reader)
         {
-            var movies = new List<Movie>();
+            var movies = new List<List<string>>();
 
             while (reader.Read())
             {
-                movies.Add(new Movie(
-                   reader.GetInt32("MovieID"),
-                   reader.GetString("Name"),
-                   reader.GetDateTimeOffset("ReleaseDate"),
-                   reader.GetString("Genre"),
-                   reader.GetInt32("DirectorID")));
+                movies.Add(new List<string>() { reader.GetString("Name"), reader.GetString("Genre"), reader.GetDateTimeOffset("ReleaseDate").ToString() });
+                   
             }
 
             return movies;

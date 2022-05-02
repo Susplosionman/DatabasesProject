@@ -43,7 +43,7 @@
             this.uxDataGrid.Location = new System.Drawing.Point(3, 42);
             this.uxDataGrid.Name = "uxDataGrid";
             this.uxDataGrid.RowHeadersWidth = 123;
-            this.uxDataGrid.Size = new System.Drawing.Size(605, 185);
+            this.uxDataGrid.Size = new System.Drawing.Size(503, 185);
             this.uxDataGrid.TabIndex = 0;
             // 
             // uxUsernameLabel
@@ -77,7 +77,7 @@
             // 
             // uxBackButton
             // 
-            this.uxBackButton.Location = new System.Drawing.Point(499, 234);
+            this.uxBackButton.Location = new System.Drawing.Point(397, 233);
             this.uxBackButton.Name = "uxBackButton";
             this.uxBackButton.Size = new System.Drawing.Size(109, 50);
             this.uxBackButton.TabIndex = 4;
@@ -88,7 +88,7 @@
             // uxDeleteReview
             // 
             this.uxDeleteReview.Location = new System.Drawing.Point(237, 234);
-            this.uxDeleteReview.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.uxDeleteReview.Margin = new System.Windows.Forms.Padding(1);
             this.uxDeleteReview.Name = "uxDeleteReview";
             this.uxDeleteReview.Size = new System.Drawing.Size(110, 50);
             this.uxDeleteReview.TabIndex = 5;
@@ -107,7 +107,7 @@
             this.Controls.Add(this.uxUsernameLabel);
             this.Controls.Add(this.uxDataGrid);
             this.Name = "UserProfile";
-            this.Size = new System.Drawing.Size(611, 287);
+            this.Size = new System.Drawing.Size(511, 287);
             ((System.ComponentModel.ISupportInitialize)(this.uxDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -16,14 +16,14 @@ namespace FrontEnd
     {
         public SqlMovieRepository smr = new SqlMovieRepository(@"Server=(localdb)\MSSQLLocalDb;Database=CIS560;Integrated Security=SSPI;");
         User CurUser { get; set; }
-        List<Movie> MoviesAttended { get; set; } = new List<Movie>();
+        List<List<string>> MoviesAttended { get; set; } = new List<List<string>>();
         List<List<string>> Reviews { get; set; } = new List<List<string>>();
         public UserProfile(User user)
         {
             CurUser = user;
             InitializeComponent();
             uxUsernameLabel.Text = user.Username +"'s Profile";
-            MoviesAttended = (List<Movie>)smr.RetrieveMoviesForUser(CurUser.UserID);
+            MoviesAttended = smr.RetrieveMoviesForUser(CurUser.UserID);
             Reviews = smr.RetrieveReviewsForUser(CurUser.UserID);
 
         }
@@ -52,7 +52,21 @@ namespace FrontEnd
 
         private void uxViewMoviesAttendedButton_Click(object sender, EventArgs e)
         {
-            uxDataGrid.DataSource = MoviesAttended;
+            uxDataGrid.Columns.Clear();
+            uxDataGrid.DataSource = null;
+            uxDataGrid.Rows.Clear();
+
+            Reviews = smr.RetrieveReviewsForUser(CurUser.UserID);
+            uxDataGrid.Columns.Add("Key", "Movie Name");
+            //uxDataGrid.Columns.Add("Values", "Director Name");
+            uxDataGrid.Columns.Add("Values", "Genre");
+            uxDataGrid.Columns.Add("Values", "Release Date");
+
+            foreach (List<string> item in MoviesAttended)
+            {
+                uxDataGrid.Rows.Add(item[0], item[1], item[2]);
+            }
+            uxDataGrid.Refresh();
         }
 
         private void uxBackButton_Click(object sender, EventArgs e)
