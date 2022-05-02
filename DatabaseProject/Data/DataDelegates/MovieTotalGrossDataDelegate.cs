@@ -38,7 +38,7 @@ namespace Data.DataDelegates
                 
                 salesDict.Add(
                    
-                   new List<string> {reader.GetString("Name"), reader.GetString("Genre"), s.ToString(), reader.GetString("Name"), "$" + reader.GetInt32("GrossSales").ToString(), reader.GetInt64("MovieRank").ToString()});
+                   new List<string> {reader.GetString("Name"), reader.GetString("Genre"), s.ToString(), reader.GetString("DirectorName"), "$" + reader.GetInt32("GrossSales").ToString(), reader.GetInt64("MovieRank").ToString()});
             }
 
             return salesDict;
