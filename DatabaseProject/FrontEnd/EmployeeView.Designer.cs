@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.uxSelectButton = new System.Windows.Forms.Button();
-            this.uxDeleteSelectedButton = new System.Windows.Forms.Button();
             this.uxMovieBox = new System.Windows.Forms.ListBox();
             this.uxAddMovieButton = new System.Windows.Forms.Button();
             this.uxLogoutButton = new System.Windows.Forms.Button();
@@ -45,16 +44,6 @@
             this.uxSelectButton.Text = "Modify Selected";
             this.uxSelectButton.UseVisualStyleBackColor = true;
             this.uxSelectButton.Click += new System.EventHandler(this.uxSelectButton_Click);
-            // 
-            // uxDeleteSelectedButton
-            // 
-            this.uxDeleteSelectedButton.Location = new System.Drawing.Point(331, 111);
-            this.uxDeleteSelectedButton.Name = "uxDeleteSelectedButton";
-            this.uxDeleteSelectedButton.Size = new System.Drawing.Size(72, 50);
-            this.uxDeleteSelectedButton.TabIndex = 7;
-            this.uxDeleteSelectedButton.Text = "Delete Selected";
-            this.uxDeleteSelectedButton.UseVisualStyleBackColor = true;
-            this.uxDeleteSelectedButton.Click += new System.EventHandler(this.uxDeleteSelectedButton_Click);
             // 
             // uxMovieBox
             // 
@@ -103,7 +92,6 @@
             this.Controls.Add(this.uxLogoutButton);
             this.Controls.Add(this.uxAddMovieButton);
             this.Controls.Add(this.uxMovieBox);
-            this.Controls.Add(this.uxDeleteSelectedButton);
             this.Controls.Add(this.uxSelectButton);
             this.Name = "EmployeeView";
             this.Size = new System.Drawing.Size(413, 293);
@@ -113,7 +101,6 @@
 
         #endregion
         private System.Windows.Forms.Button uxSelectButton;
-        private System.Windows.Forms.Button uxDeleteSelectedButton;
         private System.Windows.Forms.ListBox uxMovieBox;
         private System.Windows.Forms.Button uxAddMovieButton;
         private System.Windows.Forms.Button uxLogoutButton;
